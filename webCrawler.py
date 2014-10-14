@@ -9,12 +9,42 @@ def Connect2Web():
 	aResp = urllib2.urlopen(url)
 	web_pg = aResp.read()
 	rates = re.search(patterns[url], web_pg).group(1)
-	start = rates.find('"USD","ExchangeRate":')
-	start += len('"USD","ExchangeRate":')
-	end = rates.find(',',start)
-	USD = rates[start:end]
-	print USD
-Connect2Web()
-#textfile = file('cache.txt','wt')
-#textfile.write(Connect2Web())
-#textfile.close()
+	rates = findRates(rates)
+	
+	
+	return str(rates)
+
+#input: string of html text contains rates
+#output: dictionary in form of {'Currency Code': rates}
+def findRates(webtext):
+
+	result = {}
+	i = 0
+	while i != -1:
+		#find the currency code
+		CcyCode, i = getContent(webtext, 'CurrencyCode":"', i)
+		ExRate, i = getContent(webtext, 'ExchangeRate":', i)
+		if i == -1 :
+			break
+		result[CcyCode] = ExRate
+	
+	return result
+
+#input: string to search, index of string to begin search, the patterns
+#output: desired text in the content and the index at the end of content
+def getContent(webtext, patterns, start):
+	start = webtext.find(patterns, start)
+	content = -1
+	end = -1
+
+	if start != -1:
+		start += len(patterns)
+		end = webtext.find('"',start)
+		content = webtext[start:end]
+
+	#return -1 if not found
+	return content, end
+
+textfile = file('cache.txt','wt')
+textfile.write(Connect2Web())
+textfile.close()
