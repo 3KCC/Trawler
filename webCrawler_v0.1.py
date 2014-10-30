@@ -5,15 +5,16 @@ import MySQLdb
 import time
 from time import strftime
 
-patterns ={'http://www.travelex.com.my/MY/For-Individuals/Foreign-Exchange-Rates/Today-s-Online-Rates/': '(var rates=.*)'}
-
 def Connect2Web(url, patterns):
 	aResp = urllib2.urlopen(url)
 	web_pg = aResp.read()
 
 	mainPattern = patterns[0]
-	rates = re.search(mainPattern, web_pg).group(1)
-	rates = finding(rates, patterns)
+	rates = web_pg[web_pg.find(mainPattern):]
+	rates = rates.replace('\n','')
+	rates = re.sub(' +',' ', rates)
+	#rates = finding(rates, patterns)
+
 	return rates
 
 #input: string of html text contains rates, start patern, end pattern
@@ -66,8 +67,9 @@ def generateID(day, urlCode, FCY, LCY):
 	return day+'-'+urlCode+'-'+FCY+LCY
 
 #input: website name
-#outout: [ID, url], [main_pattern, code_pattern, bid_pattern, offer_pattern, date_pattern, unit_pattern, 
-#								code_endPattern, bid_endPattern, offer_endPattern, date_endPattern, unit_endPattern]
+#outout: [ID, url], [main_pattern, buyCCY_pattern, sellCCY_pattern, bid_pattern, offer_pattern, date_pattern, unit_pattern, 
+#								buyCCY_endPattern, selCCY_pattern, bid_endPattern, offer_endPattern, date_endPattern, unit_endPattern,
+#					order]
 def getDetails(name):
 	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 	cursor = db.cursor()
@@ -88,21 +90,25 @@ def insert(urlCode_url, patterns):
 	
 	urlCode = urlCode_url[0]
 	url = urlCode_url[1]
-	data = Connect2Web(url, patterns) # [buyCCY, sellCCY, bid, offer, date, unit]
-
+	# standard order [0,1,2,3,4,5] = [buyCCY, sellCCY, bid, offer, date, unit]
+	order = convertToList(patterns[13])
+	data = Connect2Web(url, patterns)
+	print data
+	'''
 	vals = []
 	for e in data:
 		#[buyCCY, sellCCY, bid, offer, date, unit]
-		date = time.strptime(e[4],'%A, %d %b %Y %H:%M:%S')
+		date = time.strptime(e[order[4]],'%A, %d %b %Y %H:%M:%S')
 		date = strftime('%d%m%y', date)
-		buyCCY = e[0]
-		sellCCY = e[1]
+		buyCCY = e[order[0]]
+		sellCCY = e[order[1]]
 		ID = generateID(date, urlCode, buyCCY, sellCCY)
 		row = [ID, urlCode]
 		for entry in e:
 			row.append(entry)
 		vals.append(tuple(row))
-		
+
+
 	#Prepare SQL query to INSERT a record into the database.
 	sql = """INSERT INTO RATES (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE, UNIT)\
 			VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
@@ -114,8 +120,14 @@ def insert(urlCode_url, patterns):
 	except:
 		# Rollback in case there is any error
 		db.rollback()
-
+	'''
 	db.close()
+
+#find the order of the website data, put it into list for taking out correctly in insert()
+#input: a text '0,1,2,3,4,5'
+#output: a list [0,1,2,3,4,5] - mapping for turn string into integer for the whole list
+def convertToList(txt):
+	return map(int, txt.split(','))
 
 def main():
 	target = raw_input('Enter the name of target website: ')
