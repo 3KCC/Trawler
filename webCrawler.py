@@ -2,28 +2,43 @@ import urllib
 import urllib2
 import re
 import MySQLdb
+import time
+from time import strftime
 
 patterns ={'http://www.travelex.com.my/MY/For-Individuals/Foreign-Exchange-Rates/Today-s-Online-Rates/': '(var rates=.*)'}
 
-def Connect2Web(url, pattern):
+def Connect2Web(url, patterns):
 	aResp = urllib2.urlopen(url)
 	web_pg = aResp.read()
-	rates = re.search(pattern, web_pg).group(1)
-	rates = findRates(rates)
+
+	mainPattern = patterns[0]
+	rates = re.search(mainPattern, web_pg).group(1)
+	rates = finding(rates, patterns)
 	return rates
 
-#input: string of html text contains rates
-#output: dictionary in form of {'Currency Code': rates}
-def findRates(webtext):
-	result = {}
-	i = 0
+#input: string of html text contains rates, start patern, end pattern
+#output: dictionary in form of [CurrencyCode, unit, bid, offer, date]
+def finding(webtext,patterns):
+	result = []
+	i = 0 #starting position
 	while i != -1:
-		#find the currency code
-		CcyCode, i = getContent(webtext, 'CurrencyCode":"', i)
-		ExRate, i = getContent(webtext, 'ExchangeRate":', i)
-		if i == -1 :
-			break
-		result[CcyCode] = ExRate[:-1]
+		output = []
+		for j in range(1,7):
+			#find the buyCCY, sellCCY, bid, offer, date and unit (6)
+			SP = patterns[j]
+			EP = patterns[j+6]
+			content = ""
+			#if it does not have end pattern, the website does not provide such the information
+			if EP != "":
+				content, i = getContent(webtext, SP, EP, i)
+			#determine the value by setting default value in start pattern
+			elif SP != "":
+				content = SP
+			if content == -1:
+				break
+			output.append(content)
+		if output:
+			result.append(output)
 	
 	return result
 
@@ -35,11 +50,11 @@ def getContent(webtext, SP, EP, start):
 	end = -1
 
 	if start != -1:
-		start += len(patterns)
-		end = webtext.find('"',start)
+		start += len(SP)
+		end = webtext.find(EP,start)
 		content = webtext[start:end]
 
-	#return -1 if not found
+	#return -1, -1 if not found
 	return content, end
 
 #textfile = file('cache.txt','wt')
@@ -47,11 +62,12 @@ def getContent(webtext, SP, EP, start):
 #textfile.close()
 
 #generate unique ID for each rate - FORMAT: DDMMYY-url-FCYLCY
-def generateID(day, url, LCY, FCY):
-	return day+'-'+url+'-'+FCY+LCY
+def generateID(day, urlCode, FCY, LCY):
+	return day+'-'+urlCode+'-'+FCY+LCY
 
 #input: website name
-#outout: ID, url, patterns
+#outout: [ID, url], [main_pattern, code_pattern, bid_pattern, offer_pattern, date_pattern, unit_pattern, 
+#								code_endPattern, bid_endPattern, offer_endPattern, date_endPattern, unit_endPattern]
 def getDetails(name):
 	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 	cursor = db.cursor()
@@ -61,38 +77,49 @@ def getDetails(name):
 	try:
 		cursor.execute(sql)
 		results = cursor.fetchone()
-		return results[1],results[2],results[4]
+		return results[1:3],results[4:]
 	except:
 	   print "Error: unable to fecth data"
 	db.close()
 
-def insert(url, pattern):
+def insert(urlCode_url, patterns):
 	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 	cursor = db.cursor()
-	#Prepare SQL query to INSERT a record into the database.
-	rates = Connect2Web(url, pattern)
-	vals = []
-	for e in rates:
-		sellCCY = e
-		offer = rates[e]
-		vals.append((sellCCY,offer))
+	
+	urlCode = urlCode_url[0]
+	url = urlCode_url[1]
+	data = Connect2Web(url, patterns) # [buyCCY, sellCCY, bid, offer, date, unit]
 
-	sql = "INSERT INTO RATES (SELLCCY, OFFER)\
-			VALUES (%s, %s)"
+	vals = []
+	for e in data:
+		#[buyCCY, sellCCY, bid, offer, date, unit]
+		date = time.strptime(e[4],'%A, %d %b %Y %H:%M:%S')
+		date = strftime('%d%m%y', date)
+		buyCCY = e[0]
+		sellCCY = e[1]
+		ID = generateID(date, urlCode, buyCCY, sellCCY)
+		row = [ID, urlCode]
+		for entry in e:
+			row.append(entry)
+		vals.append(tuple(row))
+		
+	#Prepare SQL query to INSERT a record into the database.
+	sql = """INSERT INTO RATES (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE, UNIT)\
+			VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
 	try:
 		# Execute the SQL command
-		cursor.executemany(sql,vals)
+		cursor.executemany(sql,tuple(vals))
 		# Commit your changes in the database
 		db.commit()
 	except:
 		# Rollback in case there is any error
 		db.rollback()
+
 	db.close()
 
 def main():
 	target = raw_input('Enter the name of target website: ')
-	ID, url, pattern = getDetails(target)
-	print pattern
-	insert(url, pattern)
+	urlCode_url, patterns = getDetails(target)
+	insert(urlCode_url, patterns)
 
 main()
