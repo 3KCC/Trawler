@@ -5,9 +5,6 @@ import MySQLdb
 import time
 from time import strftime
 
-#constant
-num_finding_cols = 6
-
 def Connect2Web(url, patterns, order):
 	aResp = urllib2.urlopen(url)
 	web_pg = aResp.read()
@@ -41,7 +38,7 @@ def finding(webtext, patterns, order):
 				break
 			output.append(content)
 
-		if len(output) == num_finding_cols:
+		if output:
 			#re-order before adding to result
 			output = reOrder(output, order)
 			result.append(output)
@@ -117,41 +114,37 @@ def insert(urlCode_url, patterns):
 	# standard order [0,1,2,3,4,5] = [buyCCY, sellCCY, bid, offer, date, unit]
 	order = convertToList(patterns[13])
 	data = Connect2Web(url, patterns, order)
-	print data
+
 	vals = []
 	
 	for e in data:
 		#[buyCCY, sellCCY, bid, offer, date, unit]
-		full_date = e[4]
+		date = e[4]
 		while True:
 			try:
-				full_date = time.strptime(full_date,'%A, %d %b %Y %H:%M:%S')
+				date = time.strptime(date,'%A, %d %b %Y %H:%M:%S')
 				break
 			except ValueError:
 				try:
-					full_date = time.strptime(full_date, '%m/%d/%Y at %H:%M %p')
+					date = time.strptime(date, '%m/%d/%Y at %H:%M %p')
 					break
 				except ValueError:
 					print "Date Time format does not matched our stored format. Please review and update!"
 					break
-		date_p = strftime('%d-%m-%Y', full_date)
-		short_date = strftime('%d%m%y', full_date)
-		time_p = strftime('%H:%M:%S', full_date)
-		#change date item to push it into a correct format
-		e[4] = date_p
+		date = strftime('%d%m%y', date)
+
 		buyCCY = e[0]
 		sellCCY = e[1]
-		ID = generateID(short_date, urlCode, sellCCY, buyCCY)
+		ID = generateID(date, urlCode, sellCCY, buyCCY)
 		row = [ID, urlCode]
-		#push all into a tuple according pre-set format
 		for entry in e:
 			row.append(entry)
-		row.insert(len(row)-1,time_p)
 		vals.append(tuple(row))
 
+
 	#Prepare SQL query to INSERT a record into the database.
-	sql = """INSERT INTO RATES (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
-			VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+	sql = """INSERT INTO RATES (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE, UNIT)\
+			VALUES (%s, %s, %s, %s, %s, %s, %s, %s)"""
 	try:
 		# Execute the SQL command
 		cursor.executemany(sql,tuple(vals))
@@ -160,7 +153,7 @@ def insert(urlCode_url, patterns):
 	except:
 		# Rollback in case there is any error
 		db.rollback()
-	
+
 	db.close()
 
 #find the order of the website data, put it into list for taking out correctly in insert()
