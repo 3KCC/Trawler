@@ -1,34 +1,52 @@
+import cookielib
 import urllib
 import urllib2
 import re
 import MySQLdb
 import time
+import datetime
 from time import strftime
 
 #constant
 num_finding_cols = 6
+order_col = 13
+postData_col = 14
+date_pos = 4
 
-def Connect2Web(url, patterns, order):
-	values = {'ID' : 'trader2',
-	          'password' : 'password1!'}
+def Connect2Web(url, patterns, order, postData):
 
-	data = urllib.urlencode(values)
-	req = urllib2.Request(url, data)
-	#response = urllib2.urlopen(req)
-	#the_page = response.read()
+	if not postData:
+		aResp = urllib2.urlopen(url)
+		web_pg = aResp.read()
+	else:
+		# Store the cookies and create an opener that will hold them
+		cj = cookielib.CookieJar()
+		opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+		# Install our opener (note that this changes the global opener to the one
+		# we just made, but you can also just call opener.open() if you want)
+		urllib2.install_opener(opener)
+		# Build our Request object (supplying 'data' makes it a POST)
+		req = urllib2.Request(url, postData)
 
+		# Make the request and read the response
+		try:
+			resp = urllib2.urlopen(req)
+			web_pg = resp.read()
+		except urllib2.HTTPError, error:
+			web_pg = error.read()
 
-	aResp = urllib2.urlopen(req)
-	web_pg = aResp.read()
-	print web_pg
+	#testing only
+	#textfile = file('cache.txt','wt')
+	#textfile.write(web_pg)
+	#textfile.close()
 	mainPattern = patterns[0]
 	rates = web_pg[web_pg.find(mainPattern):]
 	rates = re.sub(r"\s+", " ", rates)
-	#rates = finding(rates, patterns, order)
+	rates = finding(rates, patterns, order)
 
 	return rates
 
-#input: string of html text contains rates, start patern, end pattern
+#input: string of html text contains rates, start patern, end pattern and the order
 #output: dictionary in form of [CurrencyCode, unit, bid, offer, date]
 def finding(webtext, patterns, order):
 	result = []
@@ -40,7 +58,7 @@ def finding(webtext, patterns, order):
 			SP = patterns[order[j]+1]
 			EP = patterns[order[j]+7]
 			content = ""
-			#if it does not have end pattern, the website does not provide such the information
+			#if it does not have both start and end pattern, the website does not provide such the information
 			if EP != "":
 				content, i = getContent(webtext, SP, EP, i)
 			#determine the value by setting default value in start pattern
@@ -123,34 +141,66 @@ def insert(urlCode_url, patterns):
 	
 	urlCode = urlCode_url[0]
 	url = urlCode_url[1]
+
+	#convert patterns from tuple to list
+	patterns = list(patterns)
+
 	# standard order [0,1,2,3,4,5] = [buyCCY, sellCCY, bid, offer, date, unit]
-	order = convertToList(patterns[13])
-	data = Connect2Web(url, patterns, order)
-	print data
+	order = convertToList(patterns[order_col])
+	postData = patterns[postData_col]
+	patterns = patterns[:postData_col-1]
+
+	data = Connect2Web(url, patterns, order, postData)
 	vals = []
-	'''
+
 	for e in data:
 		#[buyCCY, sellCCY, bid, offer, date, unit]
-		full_date = e[4]
-		while True:
+		full_date = e[date_pos].strip()
+		if full_date and full_date != '-':
 			try:
 				full_date = time.strptime(full_date,'%A, %d %b %Y %H:%M:%S')
-				break
 			except ValueError:
 				try:
 					full_date = time.strptime(full_date, '%m/%d/%Y at %H:%M %p')
-					break
 				except ValueError:
-					print "Date Time format does not matched our stored format. Please review and update!"
-					break
+					try:
+						full_date = time.strptime(full_date, '%d/%m %H:%M:%S')
+					except ValueError:
+						print "Date Time format does not matched our stored format. Please review and update!"
+						break
+		else:
+			#if it does not provide the time, take the current time
+			full_date = datetime.datetime.now().timetuple()
+
 		date_p = strftime('%d-%m-%Y', full_date)
 		short_date = strftime('%d%m%y', full_date)
 		time_p = strftime('%H:%M:%S', full_date)
 		#change date item to push it into a correct format
 		e[4] = date_p
-		buyCCY = e[0]
-		sellCCY = e[1]
-		ID = generateID(short_date, urlCode, sellCCY, buyCCY)
+		#deal with CCYpair issue
+		if len(e[0]) > 3:
+			#the 2nd assignment for Insert to DB, 1st for generating ID
+			sellCCY = e[0][:3]
+			e[1] = sellCCY
+			buyCCY = e[0][3:]
+			e[0] = buyCCY
+		else:
+			buyCCY = e[0]
+			sellCCY = e[1]
+
+		#special case for EZFX
+		if urlCode != 'EZFX':
+			ID = generateID(short_date, urlCode, sellCCY, buyCCY)
+		elif data.index(e) % 2 == 0:
+			ID = generateID(short_date, 'MAY', sellCCY, buyCCY)
+		else:
+			#get buyCCY, sellCCY from Maybank rates. the 1st assignment for Insert to DB, 2nd for generating ID
+			e[0] = data[data.index(e)-1][0]
+			e[1] = data[data.index(e)-1][1]
+			buyCCY = e[0]
+			sellCCY = e[1]
+			ID = generateID(short_date, 'CIT', sellCCY, buyCCY)
+
 		row = [ID, urlCode]
 		#push all into a tuple according pre-set format
 		for entry in e:
@@ -158,18 +208,25 @@ def insert(urlCode_url, patterns):
 		row.insert(len(row)-1,time_p)
 		vals.append(tuple(row))
 
+	#determine which table to push data
+	if urlCode == 'TRA' or urlCode == 'MMM':
+		nameOfTb = 'RATES'
+	else:
+		nameOfTb = urlCode + 'rates'
+	
 	#Prepare SQL query to INSERT a record into the database.
-	sql = """INSERT INTO RATES (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
-			VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"""
+	sql = "INSERT INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
+			VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+
 	try:
 		# Execute the SQL command
-		cursor.executemany(sql,tuple(vals))
+		cursor.executemany(sql, tuple(vals))
 		# Commit your changes in the database
 		db.commit()
 	except:
 		# Rollback in case there is any error
 		db.rollback()
-	'''
+
 	db.close()
 
 #find the order of the website data, put it into list for taking out correctly in insert()
