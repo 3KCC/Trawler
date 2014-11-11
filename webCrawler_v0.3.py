@@ -171,6 +171,10 @@ def insert(urlCode_url, patterns):
 		else:
 			#if it does not provide the time, take the current time
 			full_date = datetime.datetime.now().timetuple()
+		
+		#deal with %m/%d - no year indicator, have to push the current year into time_struct/tuple format
+		if full_date[0] == 1900: #year part
+			full_date = time.struct_time(tuple([time.localtime()[0]]) + full_date[1:]) #tuple objects are immutable, need to construct a new obj
 
 		date_p = strftime('%d-%m-%Y', full_date)
 		short_date = strftime('%d%m%y', full_date)
