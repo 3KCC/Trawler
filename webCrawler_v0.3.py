@@ -205,6 +205,10 @@ def insert(urlCode_url, patterns):
 			sellCCY = e[1]
 			ID = generateID(short_date, 'CIT', sellCCY, buyCCY)
 
+		#remove , in bid and offer values
+		e[2] = e[2].replace(',','')
+		e[3] = e[3].replace(',','')
+
 		row = [ID, urlCode]
 		#push all into a tuple according pre-set format
 		for entry in e:
@@ -213,7 +217,7 @@ def insert(urlCode_url, patterns):
 		vals.append(tuple(row))
 
 	#determine which table to push data
-	if urlCode == 'TRA' or urlCode == 'MMM':
+	if urlCode == 'TRA' or urlCode == 'MMM' or urlCode == 'MUS':
 		nameOfTb = 'RATES'
 	else:
 		nameOfTb = urlCode + 'rates'
