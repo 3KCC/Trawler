@@ -223,7 +223,7 @@ def insert(urlCode_url, patterns):
 		nameOfTb = urlCode + 'rates'
 	
 	#Prepare SQL query to INSERT a record into the database.
-	sql = "INSERT INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
+	sql = "INSERT IGNORE INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
 			VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
 
 	try:

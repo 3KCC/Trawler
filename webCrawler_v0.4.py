@@ -10,7 +10,8 @@ import paramiko
 
 #open SSH chanel
 ssh = paramiko.SSHClient()
-ssh.connect('127.11.230.2', username='adminGcTHiBU', password='7WEphhK2LzTI')
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect('127.11.230.2', username='adminGcTHiBU', password='7WEphhK2LzTI', port='3306')
 
 #constant
 num_finding_cols = 6
