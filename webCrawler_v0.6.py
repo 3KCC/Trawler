@@ -142,7 +142,7 @@ def generateID(day, urlCode, FCY, LCY):
 #								buyCCY_endPattern, selCCY_pattern, bid_endPattern, offer_endPattern, date_endPattern, unit_endPattern,
 #					order]
 def getDetails(name):
-	db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
+	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 	cursor = db.cursor()
 	# Prepare SQL query to INSERT a record into the database.
 	sql = "SELECT * FROM url \
@@ -176,14 +176,12 @@ def getCode(country):
 			return code
 	
 	#Case3: its len is not 3. It might cointain 6chars but it is not a pair of chars. 
-	#check whether it is a valid country name
-	if checkCode(code):
-		return code
+	#if it is a valid country namem it will return code by checkCode(). Otherwise, it is returned False by checkCode()
 
-	return False
+	return checkCode(code)
 
 def checkCode(s):
-	db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
+	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 	cursor = db.cursor()
 
 	if len(s) == 3:
@@ -312,7 +310,7 @@ def insert(urlCode_url, patterns):
 				e[1] = data[data.index(e)-1][1]
 				buyCCY = getCode(e[0])
 				sellCCY = getCode(e[1])
-				if buyCCY or sellCCY:
+				if not buyCCY or  not sellCCY:
 					continue
 				ID = generateID(short_date, 'CIT', buyCCY, sellCCY)
 
@@ -333,7 +331,7 @@ def insert(urlCode_url, patterns):
 		else:
 			nameOfTb = urlCode + 'rates'
 		
-		db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
+		db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 		cursor = db.cursor()
 		#Prepare SQL query to INSERT a record into the database.
 		sql = "INSERT IGNORE INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
