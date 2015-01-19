@@ -344,6 +344,11 @@ def insert(urlCode_url, patterns):
 			e[2] = e[2].replace(',','')
 			e[3] = e[3].replace(',','')
 
+			#do not add if it is all 0
+			if e[2] != '' and e[3] != '':
+				if round(float(e[2]),4) == 0.0000 and round(float(e[3]),4) == 0.0000:
+					continue
+
 			row = [ID, urlCode]
 			#push all into a tuple according pre-set format
 			for entry in e:
