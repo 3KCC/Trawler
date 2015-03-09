@@ -28,6 +28,7 @@ method_col = 19
 dynamic_col = 20
 dynamicData_col = 28
 exception_col = 29
+checkCcyAvai_col = 30
 
 #junk words
 listOfJunk = ['min', 'minFee']
@@ -130,7 +131,7 @@ def crawlWeb(url, method, postData='', dynamicData='', patterns='', endPattern='
 
 			listOfWebs = []
 			ccyPairs = []
-
+			print dynamicData
 			if len(dynamicData) == 3:
 				baseList = dynamicData[0]
 				counterList = dynamicData[1]
@@ -153,7 +154,7 @@ def crawlWeb(url, method, postData='', dynamicData='', patterns='', endPattern='
 						web_pg = getContent(wd.page_source, patterns[0], endPattern, 0)
 						listOfWebs.append(web_pg)
 						'''
-						addWebpage(wd, listOfWebs, patterns[0], endPattern, 0)
+						addWebpage(wd, listOfWebs, patterns[0], endPattern, 0, url, [entry, e])
 						ccyPairs.append([entry, e])
 				#2nd loop for baseCCY in baseList together
 				#var i to prevent duplicates
@@ -175,7 +176,7 @@ def crawlWeb(url, method, postData='', dynamicData='', patterns='', endPattern='
 							web_pg = getContent(wd.page_source, patterns[0], endPattern, 0)
 							listOfWebs.append(web_pg)
 							'''
-							addWebpage(wd, listOfWebs, patterns[0], endPattern, 0)
+							addWebpage(wd, listOfWebs, patterns[0], endPattern, 0, url, [entry, e])
 							ccyPairs.append([entry, e])
 
 					i += 1
@@ -185,7 +186,7 @@ def crawlWeb(url, method, postData='', dynamicData='', patterns='', endPattern='
 				for entry in baseList:
 					handleRequests(wd, nameList, [entry])
 
-					addWebpage(wd, listOfWebs, patterns[0], endPattern, 0)
+					addWebpage(wd, listOfWebs, patterns[0], endPattern, 0, url, [entry])
 
 			return listOfWebs, ccyPairs
 
@@ -217,10 +218,15 @@ def handleRequests(web, nameList, keyList):
 		else:
 			clickElement(web, nameList[i])
 
-def addWebpage(web, listOfWebs, SP, EP, start):
+def addWebpage(web, listOfWebs, SP, EP, start, url, request):
 	#time.sleep(1)
-	WebDriverWait(web, 10).until(ajax_complete,  "Timeout waiting for page to load")
-	web_pg, end = getContent(web.page_source, SP, EP, start)
+	try:
+		WebDriverWait(web, 20).until(ajax_complete,  "Timeout waiting for page to load")
+		web_pg, end = getContent(web.page_source, SP, EP, start)
+	except:
+		print url + ' didn\'t response with the following request '+ str(request) +' .We have skipped it.'
+		web_pg = ''
+	
 	listOfWebs.append(web_pg)
 
 def ajax_complete(driver):
@@ -262,13 +268,8 @@ def finding(webtext, patterns, order):
 				content, i = getContent(webtext, SP, EP, i)
 			#determine the value by setting default value in start pattern
 			elif SP != "":
-				if isinstance(SP, basestring) and len(SP) <= 3:
+				if isinstance(SP, basestring):
 					content = SP
-				else:
-					if isinstance(SP, basestring):
-						SP.split()
-					content = SP[0]
-					SP = SP[1:]
 
 			if content == -1:
 				break
@@ -435,6 +436,7 @@ def insert(urlCode_url, patterns):
 	method = patterns[method_col]
 	dynamicData = []
 	exception = patterns[exception_col]
+	checkCcyAvai = patterns[checkCcyAvai_col]
 	if exception:
 		exception = ast.literal_eval(exception)
 	
@@ -442,12 +444,24 @@ def insert(urlCode_url, patterns):
 	if dynamic_pt[0] != '':
 		baseList, counterList = getDynamicList(url, method, dynamic_pt)
 		dynamicData = [baseList, counterList, patterns[dynamicData_col].split(',')]
+		dynamicData = filter(None, dynamicData)
 
 	#check recursive crawl
 	if recursive_pt[0] != '':
 		listOfUrls = getListOfUrl(url, recursive_pt[0], recursive_pt[1])
 	else:
 		listOfUrls = [url]
+
+	#check ccyAvai
+	if checkCcyAvai:
+		checkCcyAvai = checkCcyAvai.split("/,/")
+		#list of ccy got
+		ccyGot = []
+		ccyBaseToGot = []
+		#baseList
+		if dynamic_pt[0] != '':
+			for e in baseList:
+				ccyBaseToGot.append(getCode(e))
 
 	#check multi-postData
 	postData = postData.split('/,/')
@@ -459,16 +473,18 @@ def insert(urlCode_url, patterns):
 	#print inverse
 	EURMYR_bid = ''
 	EURMYR_offer = ''
+	#list CCY for Quantas
+	quantas_ccy = []
 
-	data = []
-	#listOfUrls = ['https://azimo.com/en/send-money-to-the-philippines.html', 'https://azimo.com/en/send-money-to-thailand.html']
+	#listOfUrls = ['https://azimo.com/en/send-money-to-abkhazia.html','https://azimo.com/en/send-money-to-thailand.html','https://azimo.com/en/send-money-to-uzbekistan.html']
+	listOfUrls = ['https://azimo.com/en/send-money-to-malaysia.html']
 	for link in listOfUrls:
 		#exception crawl
 		if link in exception:
 			#{'https://azimo.com/en/send-money-to-the-philippines.html':
-			#[2, '', [['GBR','AUT'],['custom-select-calculator-sendingCountry-result']],
+			#[2, '', [['United Kingdom', 'Austria'],['calculator-sendingCountry']],
 			#['id=\"calculator-sendingCurrency\"', 'val=\"', 'PHP', 'style=\"position:static;\">',
-			#'','','1','\"','','<','','',''],'0,1,2,3,4,5','<td><strong>*</strong>']}
+			#'','','1','\"','','<','','',''],[0,1,2,3,4,5],'<td><strong>*</strong>']}
 			e_method = exception[link][0]
 			e_pD = exception[link][1]
 			e_dynamicData = exception[link][2]
@@ -478,7 +494,7 @@ def insert(urlCode_url, patterns):
 			webpage, ccyPairs = crawlWeb(link, e_method, e_pD, e_dynamicData, e_pt, endPattern)
 			#print webpage
 			if isinstance(webpage, basestring):
-				data = data + parseText(webpage, e_pt, order, e_endPattern, False)
+				data = parseText(webpage, e_pt, order, e_endPattern, False)
 			else:
 				while webpage:
 					wp = webpage.pop()
@@ -487,171 +503,220 @@ def insert(urlCode_url, patterns):
 						pair = ccyPairs.pop()
 						patterns[pt_index][1] = pair[0]
 						patterns[pt_index][2] = pair[1]
-					data = data + parseText(wp, e_pt, e_order, e_endPattern, True)
+					data = parseText(wp, e_pt, e_order, e_endPattern, True)
 			#print data
 		else:
+			dynamicData_modified = [] + dynamicData
+			if dynamicData:
+				dynamicData_modified[0] = [] + dynamicData[0]
+			if checkCcyAvai:
+				aResp = urllib2.urlopen(link)
+				ccyWebpage = aResp.read()
+				start = ccyWebpage.find(checkCcyAvai[0]) + len(checkCcyAvai[0])
+				end = ccyWebpage.find(checkCcyAvai[1], start)
+				countryName = ccyWebpage[start:end]
+				start = ccyWebpage.find(checkCcyAvai[2]+countryName) + len(checkCcyAvai[2]+countryName)
+				start = ccyWebpage.find(checkCcyAvai[3], start) + len(checkCcyAvai[3])
+				end = ccyWebpage.find(checkCcyAvai[4], start)
+				ccyName = ccyWebpage[start:end]
+				print ccyBaseToGot
+				if ccyBaseToGot:
+					for e in ccyBaseToGot:
+						if e == ccyName:
+							dynamicData_modified[0].pop(ccyBaseToGot.index(e))
+					ccyPairToGot = e+ccyName
+					if ccyPairToGot in ccyGot or not dynamicData_modified[0]:
+						continue
+			print ccyPairToGot		
+			data = []
 			pt_index = 0
 			for pD in postData:
-				webpage, ccyPairs = crawlWeb(link, method, pD, dynamicData, patterns[pt_index], endPattern)
+				webpage, ccyPairs = crawlWeb(link, method, pD, dynamicData_modified, patterns[pt_index], endPattern)
 				if isinstance(webpage, basestring):
 					dt = parseText(webpage, patterns[pt_index], order, endPattern, False)
+
 					if inverse:
 						for e in dt:
 							e.append(inverse[pt_index][0])
 					data = data + dt
 				else:
+					webpage = filter(None, webpage)
+					print len(webpage)
 					while webpage:
 						wp = webpage.pop()
-						#baseCCY
-						pair = ccyPairs.pop()
-						patterns[pt_index][1] = pair[0]
-						patterns[pt_index][2] = pair[1]
+						if ccyPairs:
+							#baseCCY
+							pair = ccyPairs.pop()
+							patterns[pt_index][1] = pair[0]
+							patterns[pt_index][2] = pair[1]
 						dt = parseText(wp, patterns[pt_index], order, endPattern, True)
+						#print patterns[pt_index]
 						if inverse:
 							for e in dt:
 								e.append(inverse[pt_index][0])
 						data = data + dt
-						
+
 				pt_index += 1
-	#end for loop for listOfUrls
 
-	#data: compressed all data
-	#vals: clean data	
-	vals = []
+		#end for loop for listOfUrls
+		print data
+		#data: compressed all data
+		#vals: clean data	
+		vals = []
 
-	for e in data:
-		#[buyCCY, sellCCY, bid, offer, date, unit]
-		full_date = e[date_pos].strip()
-		if full_date and full_date != '-':
-			try:
-				full_date = time.strptime(full_date,'%A, %d %b %Y %H:%M:%S')
-			except ValueError:
+		for e in data:
+			#[buyCCY, sellCCY, bid, offer, date, unit]
+			full_date = e[date_pos].strip()
+			if full_date and full_date != '-':
 				try:
-					full_date = time.strptime(full_date, '%m/%d/%Y at %H:%M %p')
+					full_date = time.strptime(full_date,'%A, %d %b %Y %H:%M:%S')
 				except ValueError:
 					try:
-						full_date = time.strptime(full_date, '%d/%m %H:%M:%S')
+						full_date = time.strptime(full_date, '%m/%d/%Y at %H:%M %p')
 					except ValueError:
 						try:
-							full_date = time.strptime(full_date, '%Y-%m-%d %H:%M:%S')
+							full_date = time.strptime(full_date, '%d/%m %H:%M:%S')
 						except ValueError:
-							print "Date Time format does not matched our stored format. Please review and update!"
-							break
-		else:
-			#if it does not provide the time, take the current time
-			full_date = datetime.datetime.now().timetuple()
-		
-		#deal with %m/%d - no year indicator, have to push the current year into time_struct/tuple format
-		if full_date[0] == 1900: #year part
-			full_date = time.struct_time(tuple([time.localtime()[0]]) + full_date[1:]) #tuple objects are immutable, need to construct a new obj
-
-		date_p = strftime('%d-%m-%Y', full_date)
-		short_date = strftime('%d%m%y', full_date)
-		time_p = strftime('%H:%M:%S', full_date)
-		#change date item to push it into a correct format
-		e[4] = date_p
-
-		#deal with CCY issue
-		for i in range(0,2):
-			#special case for Austria
-			if e[i] == 'Austria' or e[i] == "":
-				continue
+							try:
+								full_date = time.strptime(full_date, '%Y-%m-%d %H:%M:%S')
+							except ValueError:
+								print "Date Time format does not matched our stored format. Please review and update!"
+								break
+			else:
+				#if it does not provide the time, take the current time
+				full_date = datetime.datetime.now().timetuple()
 			
-			#if it is not a valid code/country/pair
-			if  not getCode(e[i]):
-				e[i] = -1
-				break
-			else:
-				code = getCode(e[i])
-				#it is a pair
-				if len(code) == 6:
-					e[1] = code[3:]
-					e[0] = code[:3]
+			#deal with %m/%d - no year indicator, have to push the current year into time_struct/tuple format
+			if full_date[0] == 1900: #year part
+				full_date = time.struct_time(tuple([time.localtime()[0]]) + full_date[1:]) #tuple objects are immutable, need to construct a new obj
+
+			date_p = strftime('%d-%m-%Y', full_date)
+			short_date = strftime('%d%m%y', full_date)
+			time_p = strftime('%H:%M:%S', full_date)
+			#change date item to push it into a correct format
+			e[4] = date_p
+
+			#deal with CCY issue
+			for i in range(0,2):
+				#special case for Austria
+				if e[i] == 'Austria' or e[i] == " "  or e[i] == '' or ',' in e[i]:
+					continue
+				
+				#if it is not a valid code/country/pair
+				if not getCode(e[i]):
+					e[i] = -1
 					break
-				#it is a country name or a valid code
 				else:
-					e[i] = code
+					code = getCode(e[i])
+					#it is a pair
+					if len(code) == 6:
+						e[1] = code[3:]
+						e[0] = code[:3]
+						break
+					#it is a country name or a valid code
+					else:
+						e[i] = code
 
-		if e[0] == -1 or e[1] == -1:
-			break
-		elif e[0] == 'Austria' or e[1] == 'Austria' or e[0] == e[1]:
-			continue
-		else:
-			buyCCY = e[0]
-			sellCCY = e[1]
-
-		#special case for EZFX
-		if urlCode != 'EZFX':
-			ID = generateID(short_date, urlCode, buyCCY, sellCCY)
-		elif data.index(e) % 2 == 0:
-			ID = generateID(short_date, 'MAY', buyCCY, sellCCY)
-		else:
-			#get buyCCY, sellCCY from Maybank rates. the 1st assignment for Insert to DB, 2nd for generating ID
-			e[0] = data[data.index(e)-1][0]
-			e[1] = data[data.index(e)-1][1]
-			buyCCY = getCode(e[0])
-			sellCCY = getCode(e[1])
-			if not buyCCY or  not sellCCY or buyCCY == sellCCY:
-				continue
-			ID = generateID(short_date, 'CIT', buyCCY, sellCCY)
-
-		#remove , in bid and offer values
-		e[2] = e[2].replace(',','')
-		e[3] = e[3].replace(',','')
-
-		#do not add if it is all 0
-		if e[2] != '' and e[3] != '':
-			if round(float(e[2]),4) == 0.0000 and round(float(e[3]),4) == 0.0000:
-				continue
-
-		row = [ID, urlCode]
-		#push all into a tuple according pre-set format
-		for entry in e:
-			row.append(entry)
-		#[ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT, INVERSE]
-		row.insert(7,time_p)
-
-		#special case for MUS-EURMYR
-		if urlCode == 'MUS' and ID[-6:] == 'EURMYR':
-			if e[2]: EURMYR_bid = round(1/float(e[2]),4)
-			if e[3]: EURMYR_offer = e[3]
-			if not EURMYR_bid or not EURMYR_offer:
+			if e[0] == -1 or e[1] == -1:
+				break
+			elif e[0] == 'Austria' or e[1] == 'Austria' or e[0] == e[1]:
 				continue
 			else:
-				#bid, offer
-				row[4] = EURMYR_bid
-				row[5] = EURMYR_offer
-				row[9] = 'Y'
-		vals.append(tuple(row))
-	#print vals
-	
-	#determine which table to push data
-	if urlCode == 'TRA' or urlCode == 'MMM' or urlCode == 'MUS':
-		nameOfTb = 'RATES'
-	else:
-		nameOfTb = urlCode + 'rates'
+				#capitalize
+				e[0] = e[0].upper()
+				e[1] = e[1].upper()
+				buyCCY = e[0]
+				sellCCY = e[1]
 
-	#db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
-	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
-	cursor = db.cursor()
-	#Prepare SQL query to INSERT a record into the database.
-	if not inverse:
-		sql = "INSERT IGNORE INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
-			VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
-	else:
-		sql = "INSERT IGNORE INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT, INVERSE)\
-			VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+			#special case for EZFX
+			if urlCode != 'EZFX':
+				#special case for QTA
+				if urlCode == 'QTA':
+					if not quantas_ccy:
+						quantas_ccy = e[0].split(',')
+					if data.index(e) % 11 == 0:
+						e[0] = quantas_ccy.pop(0)
+					else:
+						e[0] = data[data.index(e) - 1][0]
+					buyCCY = e[0]
+				if not buyCCY or  not sellCCY or buyCCY == sellCCY:
+					continue
+				ID = generateID(short_date, urlCode, buyCCY, sellCCY)
+			elif data.index(e) % 2 == 0:
+				ID = generateID(short_date, 'MAY', buyCCY, sellCCY)
+			else:
+				#get buyCCY, sellCCY from Maybank rates. the 1st assignment for Insert to DB, 2nd for generating ID
+				e[0] = data[data.index(e)-1][0]
+				e[1] = data[data.index(e)-1][1]
+				buyCCY = getCode(e[0])
+				sellCCY = getCode(e[1])
+				if not buyCCY or  not sellCCY or buyCCY == sellCCY:
+					continue
+				ID = generateID(short_date, 'CIT', buyCCY, sellCCY)
 
-	try:
-		# Execute the SQL command
-		cursor.executemany(sql, tuple(vals))
-		# Commit your changes in the database
-		db.commit()
+			#remove , in bid and offer values
+			e[2] = e[2].replace(',','')
+			e[3] = e[3].replace(',','')
 
-	except:
-		# Rollback in case there is any error
-		db.rollback()
-	db.close()
+			#do not add if it is all 0
+			if e[2] != '' and e[3] != '':
+				if round(float(e[2]),4) == 0.0000 and round(float(e[3]),4) == 0.0000:
+					continue
+
+			row = [ID, urlCode]
+			#push all into a tuple according pre-set format
+			for entry in e:
+				row.append(entry)
+			#[ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT, INVERSE]
+			row.insert(7,time_p)
+
+			#special case for MUS-EURMYR
+			if urlCode == 'MUS' and ID[-6:] == 'EURMYR':
+				if e[2]: EURMYR_bid = round(1/float(e[2]),4)
+				if e[3]: EURMYR_offer = e[3]
+				if not EURMYR_bid or not EURMYR_offer:
+					continue
+				else:
+					#bid, offer
+					row[4] = EURMYR_bid
+					row[5] = EURMYR_offer
+					row[9] = 'Y'
+
+			#checkCcyAvai - ccyGot
+			if checkCcyAvai:
+				ccyGot.append(row[0][-6:])
+
+			vals.append(tuple(row))
+		#print vals
+		
+		#determine which table to push data
+		if urlCode == 'TRA' or urlCode == 'MMM' or urlCode == 'MUS':
+			nameOfTb = 'RATES'
+		else:
+			nameOfTb = urlCode + 'rates'
+		
+		#db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
+		db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
+		cursor = db.cursor()
+		#Prepare SQL query to INSERT a record into the database.
+		if not inverse:
+			sql = "INSERT IGNORE INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT)\
+				VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+		else:
+			sql = "INSERT IGNORE INTO " + nameOfTb + " (ID, URL, BUYCCY, SELLCCY, BID, OFFER, DATE_P, TIME_P, UNIT, INVERSE)\
+				VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+
+		try:
+			# Execute the SQL command
+			cursor.executemany(sql, tuple(vals))
+			# Commit your changes in the database
+			db.commit()
+
+		except:
+			# Rollback in case there is any error
+			db.rollback()
+		db.close()
+
 
 #find the order of the website data, put it into list for taking out correctly in insert()
 #input: a text '0,1,2,3,4,5'

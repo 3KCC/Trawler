@@ -1,14 +1,14 @@
 PhantomJS is launching GhostDriver...
-[INFO  - 2015-02-13T07:36:13.936Z] GhostDriver - Main - running on port 62446
-[INFO  - 2015-02-13T07:36:14.143Z] Session [fd001a10-b352-11e4-8c46-957217fa4593] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
-[INFO  - 2015-02-13T07:36:14.143Z] Session [fd001a10-b352-11e4-8c46-957217fa4593] - page.customHeaders:  - {}
-[INFO  - 2015-02-13T07:36:14.143Z] Session [fd001a10-b352-11e4-8c46-957217fa4593] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"windows-8-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2015-02-13T07:36:14.143Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: fd001a10-b352-11e4-8c46-957217fa4593
-[ERROR - 2015-02-13T07:36:27.852Z] Session [fd001a10-b352-11e4-8c46-957217fa4593] - page.onError - msg: ReferenceError: Can't find variable: CustomEvent
-[ERROR - 2015-02-13T07:36:27.852Z] Session [fd001a10-b352-11e4-8c46-957217fa4593] - page.onError - stack:
+[INFO  - 2015-03-06T09:59:07.058Z] GhostDriver - Main - running on port 63780
+[INFO  - 2015-03-06T09:59:08.326Z] Session [6e49f5c0-c3e7-11e4-be3b-93902a4ef290] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/534.34 (KHTML, like Gecko) PhantomJS/1.9.8 Safari/534.34","webSecurityEnabled":true}
+[INFO  - 2015-03-06T09:59:08.326Z] Session [6e49f5c0-c3e7-11e4-be3b-93902a4ef290] - page.customHeaders:  - {}
+[INFO  - 2015-03-06T09:59:08.326Z] Session [6e49f5c0-c3e7-11e4-be3b-93902a4ef290] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"1.9.8","driverName":"ghostdriver","driverVersion":"1.1.0","platform":"windows-8-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2015-03-06T09:59:08.326Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 6e49f5c0-c3e7-11e4-be3b-93902a4ef290
+[ERROR - 2015-03-06T09:59:16.911Z] Session [6e49f5c0-c3e7-11e4-be3b-93902a4ef290] - page.onError - msg: ReferenceError: Can't find variable: CustomEvent
+[ERROR - 2015-03-06T09:59:16.911Z] Session [6e49f5c0-c3e7-11e4-be3b-93902a4ef290] - page.onError - stack:
   (anonymous function) (https://azimo.com/wp-content/plugins/landing-pages//shared/assets/frontend/js/page-tracking.js?ver=3.9.2:619)
   (anonymous function) (https://azimo.com/wp-content/plugins/landing-pages//shared/assets/frontend/js/page-tracking.js?ver=3.9.2:359)
   (anonymous function) (https://azimo.com/wp-content/plugins/landing-pages//shared/assets/frontend/js/page-tracking.js?ver=3.9.2:16)
   (anonymous function) (https://azimo.com/wp-content/plugins/landing-pages//shared/assets/frontend/js/page-tracking.js?ver=3.9.2:669)
-[ERROR - 2015-02-13T07:36:41.917Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1423813001872
-[ERROR - 2015-02-13T07:36:44.442Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1423813004372
+[ERROR - 2015-03-06T09:59:29.093Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1425635969088
+[ERROR - 2015-03-06T09:59:32.534Z] WebElementLocator - _handleLocateCommand - Element(s) NOT Found: GAVE UP. Search Stop Time: 1425635972481
