@@ -1,0 +1,2048 @@
+<!DOCTYPE html><html lang="en" class="" style="margin-top: 82px; "><head><script type="text/javascript" src="https://bam.nr-data.net/1/c89bf10fb7?a=8443989&amp;pl=1431327345150&amp;v=632.2b17625&amp;to=YAMAZxBQVkZVVk0NXllJJUEDWFRGd1pXEENYCg5WEB5UVFpRUApWGA8MWhZYWUFR&amp;ap=357&amp;fe=6487&amp;dc=1413&amp;f=%5B%22err%22,%22xhr%22%5D&amp;jsonp=NREUM.setToken"></script><script type="text/javascript" async="" src="//commondatastorage.googleapis.com/code.snapengage.com/js/2284c885-c54d-47fb-8b5c-3f879a9ba526.js"></script><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+	
+
+<script type="text/javascript" async="" src="https://stats.g.doubleclick.net/dc.js"></script><script async="" src="//connect.facebook.net/en_US/fbds.js"></script><script type="text/javascript" defer="" async="" src="https://collector-207.tvsquared.com/piwik/piwik.js"></script><script type="text/javascript" async="" src="https://cdn.mxpnl.com/libs/mixpanel-2.2.min.js"></script><script type="text/javascript" async="" src="//www.googleadservices.com/pagead/conversion_async.js"></script><script async="" src="//battlestar.transferwise.com/battlestar/client/battlestar.js"></script><script id="facebook-jssdk" async="" src="//connect.facebook.net/en_US/all.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-M7V2XH"></script><script src="//cdn.optimizely.com/js/631131294.js"></script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,o){t&&t(e,n,o),o||(o={});for(var a=i(e),s=a.length,c=o[r]||(o[r]={}),f=0;s>f;f++)a[f].apply(c,n);return c}function o(t,e){s[t]=i(t).concat(e)}function i(t){return s[t]||[]}function a(){return n(e)}var s={};return{on:o,emit:e,create:a,listeners:i,_events:s}}var r="nr@context";e.exports=n()},{}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:17,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o);if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var a=document;a&&!a.hasOwnProperty("addEventListener");)a=Object.getPrototypeOf(a);a&&n(a);for(var s=XMLHttpRequest.prototype;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=e["nr@wrapped"]?t[1]=e["nr@wrapped"]:e["nr@wrapped"]=t[1]=i(e,"fn-",null,e.name||"anonymous"):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:17,2:18,ee:"QJf3ax"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:18,2:17,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:18,2:17,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:18,2:17,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",r)}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:18,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(1),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(2);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",e)}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:11,2:14,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],14:[function(t,e){function n(t){if(!t||"object"!=typeof t&&"function"!=typeof t)return-1;if(t===window)return 0;if(o.call(t,"__nr"))return t.__nr;try{return Object.defineProperty(t,"__nr",{value:r,writable:!0,enumerable:!1}),r}catch(e){return t.__nr=r,r}finally{r+=1}}var r=1,o=Object.prototype.hasOwnProperty;e.exports=n},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],17:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],18:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper";e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,f,u;try{i=this,n=o(arguments),f=r&&r(n,i)||{}}catch(d){c([d,"",[n,i,a],f])}s(e+"start",[n,i,a],f);try{return u=t.apply(i,n)}catch(p){throw s(e+"err",[n,i,p],f),p}finally{s(e+"end",[n,i,u],f)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,nrWrapper)}function a(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function s(e,n,r){try{t.emit(e,n,r)}catch(o){c([o,e,n,r])}}function c(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=a,e.flag=i,e}},{1:17,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"c89bf10fb7",applicationID:"8443989",sa:1,agent:"js-agent.newrelic.com/nr-460.min.js"}</script><script src="//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js" data-apikey="710ac4dc186d3cfe9b0b23354baa43e0"></script>
+<script>
+	Bugsnag.releaseStage = 'production';
+	Bugsnag.notifyReleaseStages = ["staging", "production"];
+	Bugsnag.appVersion = '4.1921';
+	
+		Bugsnag.user = {
+			id: '118.200.154.163'
+		};
+	
+</script>
+
+	<!--
+
+  ++++++++++                                        ++++                   ++     ++;     ++  .++
+  ++++++++++                                       ;++::                   ++     +++    .++  .++
+      ++                                           ++                      '+'   :+++    ++
+      ++    ++ .++  '++++,    +: ++++     :++++. +++++++   ;+++:    ++ .++  ++   ++,+:   ++   .++    ++++'     ++++
+      ++    ++;+++  ++++++'   ++++++++   ++++++. +++++++  +++++++   ++:+++  ++   ++ ++   ++   .++   ++++++   ,++++++
+      ++    +++          ++   ++    ++   ++        ++    ++    `++  +++     ++, :+  ++  ++    .++  ;+'      :+'    ++
+      ++    ++`      '+++++   ++    ++.  ++++`     ++    ++;;;;;++  ++.     `++ ++  ,+: ++    .++   +++:    ++';;;;++
+      ++    ++      +++++++   ++    ++.   ,++++    ++   .+++++++++  ++       ++ ++   ++ ++    .++    ++++'  +++++++++
+      ++    ++     ++:   ++   ++    ++.      :++   ++    +++        ++       .+++    ,+++     .++       ++   ++.
+      ++    ++      +++++++   ++    ++.  ++++++    ++     +++++++   ++        +++     +++     .++  +++++++   ,+++++++
+      ++    ++       +++++:   ++    ++`  '+++'     ++      ,++++:   ++        ++,     ++;     `++  :++++`      '++++`
+
+
+  Want to make it even better? We're looking for a front-end developer:
+
+  http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=q8T9VfwP&page=Job%20Description&j=o21b0fwY
+
+  Not your cup of tea?
+
+  https://transferwise.com/jobs
+
+-->
+
+
+	
+<script>
+	if(self===top){var antiClickjack=document.getElementById("antiClickjack");antiClickjack.parentNode.removeChild(antiClickjack)}else{top.location="/"}
+</script>
+
+	
+
+<script>
+//Optimizely custom variables
+window['optimizely'] = window['optimizely'] || [];
+
+//Check if user has payments
+window['optimizely'].push(["customTag", {
+	userHasNoCompletedPayments: "true",
+	userHasCompletedPayments: "false",
+	userLang: "en"
+}]);
+</script>
+
+
+
+
+	<script>
+		window['optimizely'].push(["customTag", "userLoggedIn", "false"]);
+		window['optimizely'].push(["customTag", "userNotLoggedIn", "true"]);
+	</script>
+
+
+<script>
+	(function(d, t) {
+		var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+		g.src = '//cdn.optimizely.com/js/631131294.js';
+		s.parentNode.insertBefore(g, s);
+	}(document, 'script'));
+</script>
+
+
+	<title>
+	Transfer Money Online | Send Money Abroad with TransferWise
+</title>
+
+	
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ4EUFJSGwsEUFJbDwg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script>
+
+<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="robots" content="noodp">
+	<meta name="version" content="4.1921">
+	<meta name="google-site-verification" content="d9ZnJG0yqvxWCi-eMnG1jOGvKa7TkO5YyFN35YYyWcc">
+
+	
+
+	
+<script type="text/javascript">
+	var mixPanelToken = '8ba4a7a5182f05e0a79ded57d5d2f051';
+	var baseUri = '/';
+
+	
+
+</script>
+	
+<script type="text/javascript">
+	function initMixPanel() {
+		
+
+		
+		
+		
+
+		if (!window.mixPanelCookie) {
+			mixpanel.track('first visit', {url: window.location.pathname});
+		}
+	}
+</script>
+
+<!-- Microsoft smarties -->
+	<meta http-equiv="ImageResize" content="no">
+	<meta http-equiv="ImageToolbar" content="no">
+	<meta name="MSSmartTagsPreventParsing" content="true">
+	<meta name="msapplication-config" content="/browserconfig.xml">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/common/favicon-625cf4fd0384c5e3b1eab4de315a4f8d.ico">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/common/favicon-32x32-047493bcf5a8c94811d99b26cb186662.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/common/favicon-16x16-e14a2a82e7e875e4efeb0b78525e40b1.png">
+	<link rel="image_src" href="/static/images/4.1921_fb-og-logo-flag.png">
+
+<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/json3/3.2.6/json3.min.js"></script>
+	<![endif]-->
+
+	
+		<meta property="og:image" content="https://transferwise.com/images/fb-og-logo-flag.png">
+	
+
+	
+
+	
+
+	
+	
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+	//If Google CDN Network is down, Use the same one that jQuery hosts
+	window.jQuery || document.write('<script src="//code.jquery.com/jquery-1.7.1.min.js">\x3C/script>')
+</script>
+<script>
+	//If jQuery CDN is down, use Microsoft's CDN Network
+	window.jQuery || document.write('<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js">\x3C/script>')
+</script>
+
+	
+	
+
+
+
+
+
+	
+
+	
+	<link rel="stylesheet" href="/assets/common/common-be7ed4a9b5a696d956df19a72a8fdbdb.css">
+	
+	<meta name="google-site-verification" content="5fFrG4yckYGh1V1aitMrNb8IMAxWjK7G6G57N2-DLnk">
+	<meta name="layout" content="main">
+	<link rel="alternate" hreflang="de" href="https://transferwise.com/de">
+	
+	
+
+	
+	<meta name="title" content="Transfer Money Online | Send Money Abroad with TransferWise">
+	<meta name="description" content="Banks charge a lot for overseas transfers. We don't. Transfer money abroad easily and quickly with our low cost money transfers.">
+
+
+	<meta property="twitter:account_id" content="1510092490">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@transferwise">
+<meta name="twitter:title" content="The clever new way to send money abroad">
+<meta name="twitter:description" content="Banks sting you with hidden fees when you send money abroad. But that’s yesterday’s problem. Say hello to TransferWise, the clever new way to move your money.">
+
+
+	<meta name="twitter:image:src" content="https://transferwise.com/images/social/twitter-og.jpg">
+
+
+	
+
+	
+	<link rel="stylesheet" href="/assets/landing/page.landing-6b609c38e68639b2eadf29e0eb8ee682.css">
+
+<style type="text/css">.fancybox-margin{margin-right:0px;}</style><style type="text/css">.fancybox-margin{margin-right:0px;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><style type="text/css">body .SnapABug_Button{cursor:pointer;cursor:hand;overflow:hidden;position:fixed;_position:absolute;display:block;bottom:0px;left:90%;_left:expression(eval(document.body.scrollLeft)+360);z-index:2147000000;margin:0;padding:0;border-collapse:collapse;border-spacing:0;border:none;outline:none;font-size:0px;line-height:0px;} @media print{body .SnapABug_Button{display:none;}}</style><style id="SnapABug_Style" type="text/css">#SnapABug_WP, #SnapABug_WP div, #SnapABug_WP span, #SnapABug_WP iframe, #SnapABug_WP h1, #SnapABug_WP h2, #SnapABug_WP h3, #SnapABug_WP h4, #SnapABug_WP h5, #SnapABug_WP h6, #SnapABug_WP hr, #SnapABug_WP p, #SnapABug_WP a, #SnapABug_WP big, #SnapABug_WP em, #SnapABug_WP img, #SnapABug_WP q, #SnapABug_WP small, #SnapABug_WP strong, #SnapABug_WP b, #SnapABug_WP u, #SnapABug_WP i, #SnapABug_WP fieldset, #SnapABug_WP input, #SnapABug_WP input[type="submit"], #SnapABug_WP button, #SnapABug_WP textarea, #SnapABug_WP form, #SnapABug_WP label{ margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; float: none;max-width: none; max-height: none; letter-spacing: normal; text-transform: none;-webkit-transform: none; -moz-transform: none; -ms-transform: none; -o-transform: none; transform: none; -webkit-transition-property: none; -moz-transition-property: none; -o-transition-property: none; transition: none;-webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;font-feature-settings: normal; -webkit-font-feature-settings: normal; -moz-font-feature-settings: normal; -ms-font-feature-settings: normal; -o-font-feature-settings: normal;  } #SnapABug_WP *:before, #SnapABug_WP *:after{ display:none; } #SnapABug_WP img{ display: inline-block; } </style><style>.buorg {position:absolute;position:fixed;z-index:111111;width:100%; top:0px; left:0px; border-bottom:1px solid #A29330; background:#FDF2AB no-repeat 13px center url(//browser-update.org/img/small/s.gif);text-align:left; cursor:pointer; font-family: Arial,Helvetica,sans-serif; color:#000; font-size: 12px;}.buorg div { padding:5px 36px 5px 40px; } .buorg a,.buorg a:visited  {color:#E25600; text-decoration: underline;}#buorgclose { position: absolute; right: 6px; top:-2px; height: 20px; width: 12px; font-weight: bold;font-size:18px; padding:0; }</style></head>
+
+<body><div id="buorg" class="buorg"><div>This website would like to remind you: Your browser (Apple Safari 4) is <b>out of date</b>.         <a href="http://browser-update.org/update-browser.html#17@transferwise.com" target="_blank">Update your browser</a> for more security, comfort and the best experience on this site.<div id="buorgclose">×</div></div></div>
+<script>
+    
+    
+</script>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        city: 'Singapore',
+        country: 'Singapore'
+    });
+</script>
+
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        
+
+        
+        notLoggedIn: true,
+        
+
+        language: "en",
+        isNewUser: true
+    });
+</script>
+
+<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MG3V8T"
+                  height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M7V2XH');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+
+
+<section class="b-drawer js-drawer l-hide-mobile">
+	<div class="l-container">
+		<button class="b-drawer__close js-drawer-close">×</button>
+		<div class="l-row">
+			<div class="l-span-6">
+				<div class="b-drawer__step-icon">
+					<!--[if gte IE 9]><!-->
+					<svg version="1.1" id="svg-forward" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve">
+						<line stroke="#fff" stroke-width="10" stroke-miterlimit="10" x1="194" y1="147.1" x2="86.3" y2="39.5"></line>
+						<line stroke="#fff" stroke-width="10" stroke-miterlimit="10" x1="86.1" y1="249" x2="176.9" y2="158.2"></line>
+					</svg>
+					<!--<![endif]-->
+				</div>
+				<div class="b-drawer__title">
+					1. Get started
+				</div>
+				<p class="b-drawer__text">
+					Enter how much you're transferring and where to. You can send to your own account abroad or another person or business.
+				</p>
+			</div>
+			<div class="l-span-6">
+				<div class="b-drawer__step-icon">
+					<!--[if gte IE 9]><!-->
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve">
+						<g>
+							<polygon fill="#FFFFFF" points="149,243 149,53.8 149,43 149,40.1 144.2,35.5 87,88.6 93.9,95.9 139,54 139,243 63,243 63,253 225,253 225,243 	"></polygon>
+							<polygon fill="#FFFFFF" points="201.5,88.6 163,53.1 163,66.7 194.8,95.9 	"></polygon>
+						</g>
+					</svg>
+					<!--<![endif]-->
+				</div>
+				<div class="b-drawer__title">
+					2. Upload money
+				</div>
+				<p class="b-drawer__text">
+					Pay TransferWise in your local currency. Use your debit card, just like shopping online, or make a normal bank transfer.
+				</p>
+			</div>
+			<div class="l-span-6">
+				<div class="b-drawer__step-icon">
+					<!--[if gte IE 9]><!-->
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve">
+						<g>
+							<polygon fill="#FFFFFF" points="81.4,92 70,92 67.8,92 63.2,97 116.3,154.4 123.6,147.6 81.4,102 252,102 252,92 	"></polygon>
+							<polygon fill="#FFFFFF" points="123.6,46.4 116.3,39.6 80.8,78 94.4,78 	"></polygon>
+							<polygon fill="#FFFFFF" points="164.6,241.6 171.9,248.4 207.4,210 193.8,210 	"></polygon>
+							<polygon fill="#FFFFFF" points="164.6,140.4 206.7,186 36,186 36,196 206.7,196 218,196 220.4,196 225,191 171.9,133.6 	"></polygon>
+						</g>
+					</svg>
+					<!--<![endif]-->
+				</div>
+				<div class="b-drawer__title">
+					3. Conversion
+				</div>
+				<p class="b-drawer__text">
+					TransferWise converts your money at the mid-market rate and matches you with people sending in the other direction. That's why it costs so little.
+				</p>
+			</div>
+			<div class="l-span-6">
+				<div class="b-drawer__step-icon">
+					<!--[if gte IE 9]><!-->
+					<svg version="1.1" id="svg-tick" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve">
+						<line stroke="#6ce152" stroke-width="10" stroke-miterlimit="10" x1="4" y1="134.4" x2="105.6" y2="236"></line>
+						<line stroke="#6ce152" stroke-width="10" stroke-miterlimit="10" x1="116" y1="218.1" x2="284.1" y2="50"></line>
+					</svg>
+					<!--<![endif]-->
+				</div>
+				<div class="b-drawer__title">
+					4. Money Sent
+				</div>
+				<p class="b-drawer__text">
+					The converted money is sent to the target bank account. Everyone gets notified by email, so you always know where the money is.
+				</p>
+			</div>
+		</div>
+		<div class="l-row">
+			<div class="b-drawer__video-link l-span-16 l-push-4">
+				Why switch to TransferWise? <a href="#" class="js-drawer-open-video">Watch the Video</a>
+			</div>
+			<div class="b-drawer__FCA l-span-4 l-right">
+				100% Secure<br> fully FCA regulated
+			</div>
+		</div>
+	</div>
+	<div class="b-drawer__video-container m-hidden js-drawer-video-container">
+		<button class="b-drawer__close js-drawer-video-close">×</button>
+		<video class="b-drawer__video" poster="/assets/header/how-it-works-poster.jpg" controls="" preload="none">
+			<source src="https://s3-eu-west-1.amazonaws.com/transferwise/howitworks.mp4" type="video/mp4">
+			<source src="https://s3-eu-west-1.amazonaws.com/transferwise/howitworks.webm" type="video/webm;codecs=&quot;vp8&quot;">
+		</video>
+	</div>
+</section>
+
+
+	
+
+
+	
+	
+
+
+<header class="b-header js m-hero" data-js="Header" data-js-options="{&quot;navSelector&quot;: &quot;.js-header-nav-list&quot;, &quot;navToggleSelector&quot;: &quot;.js-header-nav-toggle-button&quot;, &quot;drawerSelector&quot;: &quot;.js-drawer&quot;, &quot;sticky&quot;:true, &quot;drawerToggleSelector&quot;: &quot;.js-drawer-button&quot;, &quot;drawerCloseSelector&quot;: &quot;.js-drawer-close&quot;, &quot;openVideoSelector&quot;: &quot;.js-drawer-open-video&quot;, &quot;closeVideoSelector&quot;: &quot;.js-drawer-video-close&quot;, &quot;videoContainerSelector&quot;: &quot;.js-drawer-video-container&quot;}">
+	<div class="l-container m-full-height">
+		<h1 class="b-header__logo l-span-4">
+			
+
+
+	<a href="/en" class="b-header__logolink"></a>
+
+		</h1>
+		
+			<nav class="b-header__language-selector l-span-2 l-hide-mobile">
+				
+					<a href="#" class="b-header__language-selector-current m-en">&nbsp;</a>
+				
+				<ul class="b-header__language-selector-list">
+					<li class="b-header__language-selector-list-item m-gb"><a href="/en">EN</a></li>
+					<li class="b-header__language-selector-list-item m-pl"><a href="/pl">PL</a></li>
+					<li class="b-header__language-selector-list-item m-de"><a href="/de">DE</a></li>
+					<li class="b-header__language-selector-list-item m-es"><a href="/es">ES</a></li>
+					<li class="b-header__language-selector-list-item m-it"><a href="/it">IT</a></li>
+					<li class="b-header__language-selector-list-item m-fr"><a href="/fr">FR</a></li>
+				</ul>
+			</nav>
+		
+		<nav class="b-header__nav l-right">
+			<button class="b-header__nav-toggle l-show-mobile js-header-nav-toggle-button"></button>
+			<ul class="b-header__nav-list js-header-nav-list">
+				
+					<li class="b-header__nav-item l-hide">
+						<a href="#" class="b-header__nav-item-link js-drawer-button">
+							How it works
+						</a>
+					</li>
+					<li class="b-header__nav-item l-show-mobile">
+						<a href="/transferFlow" class="b-header__nav-item-link">
+							Send money
+						</a>
+					</li>
+				
+				
+					<li class="b-header__nav-item l-hide-sticky">
+						<a href="/register/index" class="b-header__nav-item-link js-header-register">
+							Sign Up
+						</a>
+					</li>
+					<li class="b-header__nav-item l-hide-sticky">
+						<a href="/login/index" class="b-header__nav-item-link js-header-login" onclick="this.blur();">
+							Login
+						</a>
+					</li>
+				
+				
+
+				<li class="js-header-help-button b-header__nav-item m-dropdown l-hide-sticky">
+					<a href="/faq/index" class="b-header__nav-item-link" target="_self">
+						Help
+					</a>
+					<ul class="b-header__nav-dropdown">
+						<li class="b-header__nav-dropdown-item">
+							<a href="/faq/showOnDesk/supported-currencies" class="b-header__nav-dropdown-item-link" target="_self">
+								What currencies are supported?
+							</a>
+						</li>
+						<li class="b-header__nav-dropdown-item">
+							<a href="/faq/showOnDesk/how-long-does-it-take" class="b-header__nav-dropdown-item-link" target="_self">
+								How long does my transfer take?
+							</a>
+						</li>
+						<li class="b-header__nav-dropdown-item">
+							<a href="/faq/showOnDesk/what-is-transferwise" class="b-header__nav-dropdown-item-link" target="_self">
+								What is TransferWise?
+							</a>
+						</li>
+						<li class="b-header__nav-dropdown-item">
+							<a href="/faq" class="b-header__nav-dropdown-item-link m-highlighted" target="_self">
+								More answers…
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				
+					
+						
+							<li class="b-header__nav-item m-button l-hide-mobile">
+								<button class="b-button m-small m-alternative js-drawer-button">
+									How it works
+								</button>
+							</li>
+						
+					
+
+					<li class="b-header__nav-item m-button l-show-sticky l-hide-mobile">
+						<a href="/transferFlow" class="b-button m-small event-header-send-money js-header__send-money">
+							Send money
+						</a>
+					</li>
+				
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+
+
+	<div class="b-page">
+		
+<section class="b-hero ">
+	<div class="l-container">
+		
+		
+		
+		<div class="l-row">
+
+			<div class="">
+				
+
+	<h2 class="b-hero__title b-hero__title-en" style="text-align: center; ">
+		The clever new way to beat bank fees
+	</h2>
+	<p class="b-hero__subtitle" style="text-align: center; ">
+  Banks charge hidden fees when you send money abroad.
+  <br>
+  With TransferWise you save up to 90%. Problem solved, money saved.
+</p>
+
+
+			</div>
+			<div class="l-push-8 l-span-8 l-push-tablet-7 l-span-tablet-10">
+				
+
+  
+	<form action="/request/placeOrder" method="get" name="calculateForm" target="_top" id="calculateForm">
+		<input type="hidden" name="fixType" value="SOURCE" id="fixType">
+
+		
+			
+		
+
+		<div class="b-calculator js " data-js="Calculator" data-js-options="{&quot;detailsToggleSelector&quot;: &quot;.js-b-calculator-details-toggle&quot;}">
+			
+
+			<div class="b-calculator__input-container ">
+				<label class="b-calculator__input-label" for="b-calculator__input-amount-send">You send</label>
+				<input type="tel" name="sourceValue" class="b-calculator__input-amount" id="b-calculator__input-amount-send" value="1000" maxlength="12">
+				<div class="b-calculator__input-currency">
+					<select name="sourceCurrencyId" class="b-calculator__input-currency-select sourceCurrency"><option value="2">GBP</option><option value="1">EUR</option><option value="3">USD</option><option value="4">PLN</option><option value="7">SEK</option><option value="8">DKK</option><option value="5">CHF</option><option value="6">NOK</option><option value="14">HUF</option><option value="15">GEL</option><option value="31">TRY</option><option value="30">RON</option><option value="40">CZK</option><option value="41">BGN</option><option value="Other" class="other-cur-option">Other</option></select>
+					<div class="b-calculator__input-currency-current js-source-currency-label">GBP</div>
+				</div>
+			</div>
+
+			<div class="b-calculator__input-container ">
+				<label class="b-calculator__input-label" for="b-calculator__input-amount-receive">Receive</label>
+				<input type="checkbox" value="1" name="isFixTypeTarget" id="isFixTypeTarget" class="l-hide">
+				<input type="tel" name="targetValue" class="b-calculator__input-amount disabled" id="b-calculator__input-amount-receive" value="1000" maxlength="12">
+				<div class="b-calculator__input-currency">
+					<select name="targetCurrencyId" class="b-calculator__input-currency-select targetCurrency"><option value="1">EUR</option><option value="3">USD</option><option value="4">PLN</option><option value="5">CHF</option><option value="6">NOK</option><option value="7">SEK</option><option value="8">DKK</option><option value="9">AUD</option><option value="10">CAD</option><option value="14">HUF</option><option value="15">GEL</option><option value="24">HKD</option><option value="26">INR</option><option value="28">MYR</option><option value="30">RON</option><option value="31">TRY</option><option value="32">NZD</option><option value="33">PHP</option><option value="35">SGD</option><option value="40">CZK</option><option value="41">BGN</option><option value="42">BRL</option><option value="54">NGN</option><option value="55">PKR</option><option value="65">MAD</option><option value="Other" class="other-cur-option">Other</option></select>
+					<div class="b-calculator__input-currency-current js-target-currency-label">EUR</div>
+				</div>
+			</div>
+			
+
+			
+
+			
+			<input class="b-button m-full-width event_calc_make_a_transfer" type="submit" value="Get started" style="left: 0px; position: relative; top: 0px; height: 72px; "><div class="b-calculator__save " style="margin-top: 12px; margin-bottom: 24px; left: 0px; position: relative; top: 0px; ">
+				You could save an average of <span class="js-saving-currency-symbol">€</span><span class="js-saving-amount">61.44</span> vs your bank<a href="#" class="b-calculator__details-toggle js-b-calculator-details-toggle"><span></span>Why?</a>
+			</div>
+			<div class="b-calculator__details results js-b-calculator-details">
+<div class="b-calculator__details-labels">
+	<strong>Honest rate</strong>
+	<strong class="m-label-space-hack-for-legal">Lower fee</strong>
+</div>
+<div class="b-calculator__details-transferwise">
+	<strong>TransferWise</strong>
+	<p>1.38090</p>
+	<small>
+		Updated every 11 mins
+		<img src="/static/images/4.1921_questionmarkx.png" data-interactive="false" data-theme=".tw-default" title="The ‘receive’ amount is based on the last updated mid-market exchange rate. The actual sum received will depend on the mid-market rate at the time of conversion." class="tooltipster b-calculator__tooltip">
+	</small>
+	<p>
+	£ 4.98 
+	
+</p>
+	<small>No hidden fees</small>
+</div>
+<div class="b-calculator__details-bank">
+	<strong>
+		Bank average
+		<img src="/static/images/4.1921_questionmarkx.png" data-interactive="false" data-theme=".tw-default" title="The average bank foreign exchange rate and fee was independently obtained for TransferWise by Charterhouse Research Ltd on June 2014. This data has been used to extrapolate the average rates and fees charged by banks when making foreign currency transfers abroad." class="tooltipster b-calculator__tooltip">
+	</strong>
+
+	<p>1.33257</p>
+	<small>&nbsp;</small>
+	<p>£ 49.48</p>
+	<small>&nbsp;</small>
+</div>
+<div class="b-calculator__details-link-to-details-container">
+	<a href="https://transferwise.desk.com/customer/portal/articles/1893701-what-does-%E2%80%9Caverage-bank%E2%80%9D-and-%E2%80%9Cyou%E2%80%99ll-save%E2%80%9D-mean-" class="b-calculator__details-link-to-details">Click here for more details</a>
+</div>
+
+
+</div>
+
+		</div>
+	</form>
+
+
+
+	
+		<div style="display: none">
+	<div class="js-authenticate-modal">
+		<a href="#authenticateModal" id="fire-emailCapture" class="hide">fire</a>
+		<div id="authenticateModal">
+			<section class="b-authenticate-modal">
+	<h1>Already a member?</h1>
+	<form action="/" method="post" name="alreadyAMember" id="alreadyAMember">
+	
+		<input type="hidden" name="sourceValue" value="" id="sourceValue">
+		<input type="hidden" name="targetValue" value="" id="targetValue">
+		<input type="hidden" name="sourceCurrencyId" value="" id="sourceCurrencyId">
+		<input type="hidden" name="targetCurrencyId" value="" id="targetCurrencyId">
+		<input type="hidden" name="fixType" value="SOURCE" id="fixType">
+		<input onclick="jQuery.ajax({type:'POST',data:jQuery(this).parents('form:first').serialize(), url:'/authenticationModal/registerFormModal',success:function(data,textStatus){jQuery('#authenticateModal').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});return false" type="button" value="Not yet" class="b-button m-alternative b-authenticate-modal__not-yet-button">
+		<input onclick="jQuery.ajax({type:'POST',data:jQuery(this).parents('form:first').serialize(), url:'/authenticationModal/loginFormModal',success:function(data,textStatus){jQuery('#authenticateModal').html(data);},error:function(XMLHttpRequest,textStatus,errorThrown){}});return false" type="button" value="Yes" class="b-button b-authenticate-modal__yes-button">
+	</form>
+
+
+	<div class="b-authenticate-modal__FCA-secured">
+		100% secure &amp; fully FCA regulated
+	</div>
+</section>
+
+<script>
+	jQuery('.b-authenticate-modal__not-yet-button').click(function () {
+		LogUtils.sendGoogleAnalyticsEvent('member_modal', 'click_not_yet');
+	});
+
+	jQuery('.b-authenticate-modal__yes-button').click(function () {
+		LogUtils.sendGoogleAnalyticsEvent('member_modal', 'click_yes');
+	});
+</script>
+
+		</div>
+	</div>
+</div>
+
+	
+
+
+
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+		
+
+
+		
+<section class="b-trust-four-elements l-hide-mobile ">
+	<div class="l-container">
+		<div class="l-row">
+			<div class="l-span-22 l-push-1">
+				<div class="b-trust-four-elements__item  l-span-6">
+					<div class="b-trust-four-elements__branson">Branson</div>
+					<div class="b-trust-four-elements__branson-text">Sir Richard Branson invested in TransferWise - <a href="https://transferwise.com/blog/2014-06/sir-richard-branson-joins-our-mission-to-stamp-out-hidden-fees/" target="_blank"> read why </a></div>
+				</div>
+				<div class="b-trust-four-elements__item m-reviews l-span-6">
+					<ul class="b-trust-four-elements__rating">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+					<div class="b-trustpilot js">
+						<span class="js-trustpilot__review-stars">5/5</span> star rating, <span class="js-trustpilot__review-count">16785</span> reviews Customers love TransferWise
+					</div>
+				</div>
+				<div class="b-trust-four-elements__item l-span-6">
+					Winners of the <span class="b-trust-four-elements__ft">Financial Times</span> Boldness in Business 2014 award
+				</div>
+				<div class="b-trust-four-elements__item m-skype l-span-6">
+					From the people who built
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		<section class="b-facepile l-hide-mobile js" data-js="Facepile" data-js-options="" style="display: none; ">
+	<div class="l-container">
+		<div class="l-row">
+			<div class="b-facepile__container l-span-22 l-push-1 l-span-tablet-24 l-push-tablet-0">
+				<div class="fb-facepile fb_iframe_widget" data-href="https://www.facebook.com/transferwise" data-width="1152" data-max-rows="1" data-colorscheme="light" data-size="large" data-show-count="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=1386687314903860&amp;color_scheme=light&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftransferwise&amp;locale=en_US&amp;max_rows=1&amp;sdk=joey&amp;show_count=true&amp;size=large&amp;width=1152"><span style="vertical-align: bottom; width: 0px; height: 0px; "><iframe name="f1e05e181c" width="1152px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:facepile Facebook Social Plugin" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; visibility: visible; width: 0px; height: 0px; " src="https://www.facebook.com/plugins/facepile.php?app_id=1386687314903860&amp;channel=https%3A%2F%2Fs-static.ak.facebook.com%2Fconnect%2Fxd_arbiter%2FKTWTb9MY5lw.js%3Fversion%3D41%23cb%3Df10c64ed08%26domain%3Dtransferwise.com%26origin%3Dhttps%253A%252F%252Ftransferwise.com%252Ff3b19af474%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=0&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftransferwise&amp;locale=en_US&amp;max_rows=1&amp;sdk=joey&amp;show_count=true&amp;size=large&amp;width=1152" class=""></iframe></span></div>
+			</div>
+		</div>
+	</div>
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px; "><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" style="border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; " src="https://s-static.ak.facebook.com/connect/xd_arbiter/KTWTb9MY5lw.js?version=41#channel=f3b19af474&amp;origin=https%3A%2F%2Ftransferwise.com"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px; "><div></div></div></div>
+</section>
+		
+<section class="b-benefits js" data-js="Benefits" data-js-options="{&quot;itemSelector&quot;: &quot;.js-benefits-icon&quot;, &quot;scrollThreshold&quot;: 400}" id="welcome">
+	<div class="l-container">
+		<h1 class="b-benefits__title">Welcome to money without Borders</h1>
+		<div class="l-row">
+			<div class="l-span-8 b-benefits__item">
+				<div class="b-benefits__item-icon m-plus js-benefits-icon">
+					<!--[if gte IE 9]><!-->
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve">
+						<line class="svg-line-1-placeholder" fill="none" stroke="#c8d4db" stroke-width="10" stroke-miterlimit="10" x1="144" y1="36" x2="144" y2="252" shape-rendering="crispEdges"></line>
+						<line class="svg-line-2-placeholder" fill="none" stroke="#c8d4db" stroke-width="10" stroke-miterlimit="10" x2="252" y2="144" x1="164" y1="144" shape-rendering="crispEdges"></line>
+						<line class="svg-line-3-placeholder" fill="none" stroke="#c8d4db" stroke-width="10" stroke-miterlimit="10" x1="144" y1="144" x2="36" y2="144" shape-rendering="crispEdges"></line>
+						<line class="svg-line-1" fill="none" stroke="#00c6ff" stroke-width="10" stroke-miterlimit="10" x1="144" y1="36" x2="144" y2="252" shape-rendering="crispEdges"></line>
+						<line class="svg-line-2" fill="none" stroke="#00c6ff" stroke-width="10" stroke-miterlimit="10" x2="252" y2="144" x1="164" y1="144" shape-rendering="crispEdges"></line>
+						<line class="svg-line-3" fill="none" stroke="#00c6ff" stroke-width="10" stroke-miterlimit="10" x1="144" y1="144" x2="36" y2="144" shape-rendering="crispEdges"></line>
+					</svg>
+					<!--<![endif]-->
+				</div>
+				
+					<h2 class="b-benefits__item-title">10 times lower cost.</h2>
+					<p>Banks charge 5% in hidden fees.<br>People on TransferWise pay 0.5%.</p>
+				
+			</div>
+			<div class="l-span-8 b-benefits__item">
+				<div class="b-benefits__item-icon m-forward js-benefits-icon">
+					<!--[if gte IE 9]><!-->
+					<svg version="1.1" id="svg-forward" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve">
+						<line class="svg-line-1-placeholder" fill="none" stroke="#c8d4db" stroke-width="10" stroke-miterlimit="10" x1="194" y1="147.1" x2="86.3" y2="39.5"></line>
+						<line class="svg-line-2-placeholder" fill="none" stroke="#c8d4db" stroke-width="10" stroke-miterlimit="10" x1="86.1" y1="249" x2="176.9" y2="158.2"></line>
+						<line class="svg-line-1" fill="none" stroke="#00c6ff" stroke-width="10" stroke-miterlimit="10" x1="194" y1="147.1" x2="86.3" y2="39.5"></line>
+						<line class="svg-line-2" fill="none" stroke="#00c6ff" stroke-width="10" stroke-miterlimit="10" x1="86.1" y1="249" x2="176.9" y2="158.2"></line>
+					</svg>
+					<!--<![endif]-->
+				</div>
+				<h2 class="b-benefits__item-title">Faster, Simpler.</h2>
+				<p>Tap in how much and where to.<br>Upload money, let the magic happen.</p>
+			</div>
+			<div class="l-span-8 b-benefits__item">
+				<div class="b-benefits__item-icon m-tick js-benefits-icon">
+					<!--[if gte IE 9]><!-->
+					<svg version="1.1" id="svg-tick" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve">
+						<line class="svg-line-1-placeholder" fill="none" stroke="#c8d4db" stroke-width="10" stroke-miterlimit="10" x1="4" y1="134.4" x2="105.6" y2="236"></line>
+						<line class="svg-line-2-placeholder" fill="none" stroke="#c8d4db" stroke-width="10" stroke-miterlimit="10" x1="116" y1="218.1" x2="284.1" y2="50"></line>
+						<line class="svg-line-1" fill="none" stroke="#00c6ff" stroke-width="10" stroke-miterlimit="10" x1="4" y1="134.4" x2="105.6" y2="236"></line>
+						<line class="svg-line-2" fill="none" stroke="#00c6ff" stroke-width="10" stroke-miterlimit="10" x1="116" y1="218.1" x2="284.1" y2="50"></line>
+					</svg>
+					<!--<![endif]-->
+				</div>
+				<h2 class="b-benefits__item-title">Outsmart your bank.</h2>
+				<p>A totally new way to beat the old system,<br>founded on fairness</p>
+			</div>
+		</div>
+	</div>
+</section>
+		<section class="b-testimonials l-hide-mobile l-hide-ie8 js" data-js="Testimonials" data-js-options="{&quot;quoteParentSelector&quot; : &quot;.js-testimonial-quotes&quot;, &quot;quoteSelector&quot; : &quot;.js-testimonial-quote&quot;, &quot;playButton&quot; : &quot;.js-testimonials-play&quot;, &quot;testimonialWrap&quot; : &quot;.js-testimonial-wrap&quot;, &quot;testimonialVideo&quot; : &quot;.js-testimonials-video&quot;, &quot;testimonialVideoSilent&quot; : &quot;.js-testimonials-video-silent&quot;, &quot;closeButton&quot; : &quot;.js-testimonials-close&quot;, &quot;testimonialBg&quot; : &quot;.b-testimonials__quote-bg&quot;}">
+	<div class="l-container">
+		<div class="b-testimonials__wrap js-testimonial-wrap">
+			<div class="b-testimonials__quotes js-testimonial-quotes">
+
+				<div class="b-testimonials__quote js-testimonial-quote">
+					<div class="b-testimonials__quote-body">“I was in need of a money transfer service which was convenient and pretty easy to do.</div>
+					<div class="b-testimonials__quote-author">— <strong class="b-testimonials__quote-name">Ben</strong> <span class="b-testimonials__quote-desc">Expat</span></div>
+				</div>
+				<div class="b-testimonials__quote js-testimonial-quote">
+					<div class="b-testimonials__quote-body">“It saves money for us and saves money for our customers.</div>
+					<div class="b-testimonials__quote-author">— <strong class="b-testimonials__quote-name">Peter</strong> <span class="b-testimonials__quote-desc">Co-Founder of <br>Newcomer Wines Ltd</span></div>
+				</div>
+				<div class="b-testimonials__quote js-testimonial-quote m-active">
+					<div class="b-testimonials__quote-body">“The rates are great and it is very, very transparent.</div>
+					<div class="b-testimonials__quote-author">— <strong class="b-testimonials__quote-name">Kritika</strong> <span class="b-testimonials__quote-desc">Customer</span></div>
+				</div>
+				<div class="b-testimonials__quote js-testimonial-quote">
+					<div class="b-testimonials__quote-body">“I've saved over a thousand pounds.</div>
+					<div class="b-testimonials__quote-author">— <strong class="b-testimonials__quote-name">Katrina</strong> <span class="b-testimonials__quote-desc">Expat</span></div>
+				</div>
+				<div class="b-testimonials__quote js-testimonial-quote">
+					<div class="b-testimonials__quote-body">“I couldn’t imagine my student life without TransferWise anymore.</div>
+					<div class="b-testimonials__quote-author">— <strong class="b-testimonials__quote-name">Aino</strong> <span class="b-testimonials__quote-desc">Student</span></div>
+				</div>
+				<div class="b-testimonials__quote js-testimonial-quote">
+					<div class="b-testimonials__quote-body">“Really happy with the service, recommend to all my friends - and it's great!</div>
+					<div class="b-testimonials__quote-author">— <strong class="b-testimonials__quote-name">Vicent</strong> <span class="b-testimonials__quote-desc">Software Developer</span></div>
+				</div>
+
+			</div>
+
+			<div class="b-testimonials__quote-bg"></div>
+
+			<button class="b-testimonials__play js-testimonials-play">
+				<svg version="1.1" id="svg-play" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 288 288" enable-background="new 0 0 288 288" space="preserve" class="b-testimonials__play-image" height="72">
+					<line class="svg-line-1" fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" x1="194" y1="147.1" x2="86.3" y2="39.5"></line>
+					<line class="svg-line-2" fill="none" stroke="#ffffff" stroke-width="10" stroke-miterlimit="10" x1="86.1" y1="249" x2="176.9" y2="158.2"></line>
+				</svg>
+			</button>
+			<button class="b-testimonials__video-close js-testimonials-close">×</button>
+
+			<video width="1152" height="720" poster="/assets/landing/testimonials-video-silent-poster.jpg" id="silent-video" preload="none" loop="" class="b-testimonials__video-silent js-testimonials-video-silent">
+				<source src="https://s3-eu-west-1.amazonaws.com/transferwise/testimonials-video-silent.mp4" type="video/mp4">
+				<source src="https://s3-eu-west-1.amazonaws.com/transferwise/testimonials-video-silent.webm" type="video/webm;codecs=&quot;vp8&quot;">
+			</video>
+			<video width="1152" height="720" poster="/assets/landing/testimonials-video-poster.jpg" preload="none" class="b-testimonials__video js-testimonials-video">
+				<source src="https://s3-eu-west-1.amazonaws.com/transferwise/testimonials-video.mp4" type="video/mp4">
+				<source src="https://s3-eu-west-1.amazonaws.com/transferwise/testimonials-video.webm" type="video/webm;codecs=&quot;vp8&quot;">
+			</video>
+
+		</div>
+	</div>
+</section>
+
+		
+<section class="b-reviews js" data-js="TrustPilot" data-js-options="{&quot;reviewCountElement&quot;: &quot;.js-trustpilot__review-count&quot;,&quot;reviewStarsElement&quot;:&quot;.js-trustpilot__review-stars&quot;, &quot;reviewItemStars&quot; : &quot;.js-reviews__rating&quot;, &quot;reviewItemQuote&quot;:&quot;p&quot;,  &quot;reviewItemName&quot;:&quot;span&quot; }">
+	<div class="l-container">
+		<div class="l-row">
+			<div class="l-span-8 b-reviews__item js-reviews__item">
+				<ul class="b-reviews__rating js-reviews__rating"><li></li><li></li><li></li><li></li><li></li></ul>
+				<p href="https://uk.trustpilot.com/users/12421174">“Very quick and efficient service”</p><span>NICKY, 3 days ago</span>
+			</div>
+			<div class="l-span-8 b-reviews__item js-reviews__item">
+				<ul class="b-reviews__rating js-reviews__rating"><li></li><li></li><li></li><li></li><li></li></ul>
+				<p href="https://uk.trustpilot.com/users/12417175">“TransferWise The Best of The Best!!!!!!!!!!!!”</p><span>Marius Valentin, 3 days ago</span>
+			</div>
+			<div class="l-span-8 b-reviews__item js-reviews__item">
+				<ul class="b-reviews__rating js-reviews__rating"><li></li><li></li><li></li><li></li><li></li></ul>
+				<p href="https://uk.trustpilot.com/users/12412109">“Easy and fast, I'll definitely keep using Transferwise, it solves the problem welll.”</p><span>James, 4 days ago</span>
+			</div>
+			<div class="b-trustpilot js">
+				<h1 class="b-reviews__title"><span class="js-trustpilot__review-stars">5/5</span> star rating, <span class="js-trustpilot__review-count">16785</span> independent reviews</h1>
+			</div>
+			<p class="b-reviews__subtitle">
+				
+					It's your money. Only perfect is good enough. Read all the reviews at <a href="http://www.trustpilot.co.uk/review/transferwise.com" class="event-click-trustpilot-link">Trustpilot.co.uk</a>
+				
+			</p>
+		</div>
+	</div>
+</section>
+		<section class="b-transfer-map l-hide-mobile l-hide-ie8 js" data-js="TransferMap" data-js-options="{&quot;transferMapSelector&quot;: &quot;.b-transfer-map__map&quot;, &quot;indicatorSelector&quot;: &quot;.js-transfer-map__flag&quot;, &quot;indicatorAmountSelector&quot; : &quot;.js-transfer-map__amount&quot;, &quot;indicatorTimeSelector&quot; : &quot;.js-transfer-map__time&quot;, &quot;json&quot;:&quot;/request/paymentsJson&quot;, &quot;placeholders&quot; : &quot;.js-transfer-map__placeholder&quot;, &quot;timeMoments&quot;: &quot;moments ago&quot;, &quot;timeMinutes&quot;: &quot;2 mins ago&quot;  }">
+	<div class="b-transfer-map__map"><div class="b-transfer-map__flag js-transfer-map__flag m-it m-westeurope" style="opacity: 0.4388921000300553; ">
+			<span class="js-transfer-map__amount">£1000</span>
+			<small class="js-transfer-map__time">moments ago</small>
+		</div><div class="b-transfer-map__flag js-transfer-map__flag m-ro m-easteurope" style="">
+			<span class="js-transfer-map__amount">£500</span>
+			<small class="js-transfer-map__time">moments ago</small>
+		</div>
+		<div class="l-container">
+			<h1 class="b-transfer-map__title">Trusted all over the World</h1>
+			<p class="b-transfer-map__subtitle">No skyscrapers, no suits. Just like-minded people everywhere, connected by TransferWise.</p>
+		</div>
+		
+		<div class="b-transfer-map__flag js-transfer-map__placeholder m-northamerica" style="display: none; ">
+			<span class="js-transfer-map__amount">₹6k</span>
+			<small class="js-transfer-map__time">
+				23 mins ago
+			</small>
+		</div>
+		<div class="b-transfer-map__flag js-transfer-map__placeholder m-australia" style="display: none; ">
+			<span class="js-transfer-map__amount">$20k</span>
+			<small class="js-transfer-map__time">
+				1 day ago
+			</small>
+		</div>
+		<div class="b-transfer-map__flag js-transfer-map__placeholder m-northeurope" style="display: none; ">
+			<span class="js-transfer-map__amount">$3500</span>
+			<small class="js-transfer-map__time">
+				moments ago
+			</small>
+		</div>
+		<div class="b-transfer-map__flag js-transfer-map__placeholder m-westeurope" style="display: none; ">
+			<span class="js-transfer-map__amount">$200</span>
+			<small class="js-transfer-map__time">
+				48 mins ago
+			</small>
+		</div>
+		<div class="b-transfer-map__flag js-transfer-map__placeholder m-singapore" style="display: none; ">
+			<span class="js-transfer-map__amount">kr500</span>
+			<small class="js-transfer-map__time">
+				15 mins ago
+			</small>
+		</div>
+		<div class="b-transfer-map__flag js-transfer-map__placeholder m-india" style="display: none; ">
+			<span class="js-transfer-map__amount">$80k</span>
+			<small class="js-transfer-map__time">
+				3 hours ago
+			</small>
+		</div>
+	</div>
+</section>
+
+		
+<section class="b-cta">
+	<div class="l-container">
+		<a href="/transferFlow" class="b-button m-large event-bottom-get-started js-header__send-money">Get started</a>
+	</div>
+</section>
+		<section class="b-press">
+	<div class="l-container">
+		<div class="l-row">
+			<blockquote class="l-span-8 b-press__item m-financial">
+				<cite class="b-press__item-source">Financial Times</cite>
+				<p>TransferWise is looking to use the internet to spark a digital revolution in current financial services</p>
+			</blockquote>
+			<blockquote class="l-span-8 b-press__item m-wired">
+				<cite class="b-press__item-source">Wired</cite>
+				<p>Smart tech and sharp thinking are disrupting high-street banks</p>
+			</blockquote>
+			<blockquote class="l-span-8 b-press__item m-economist">
+				<cite class="b-press__item-source">The Economist</cite>
+				<p>TransferWise has every chance of carving out a sizeable niche in the currency exchange market</p>
+			</blockquote>
+		</div>
+	</div>
+</section>
+		<section class="b-support">
+	<div class="l-container">
+		<h1 class="b-support__title">Rock star support</h1>
+		<p class="b-support__subtitle">When questions come up, there's a team ready to help you out.
+			<a href="/faq" class="event-find-out-more-bottom-support">Find out more</a>
+	</p></div>
+</section>
+
+	</div>
+	
+
+<div style="display: none">
+	<div class="cur-wish-dialog cur-wish-dialog-normal m-metaweb" id="cur-wish-dialog">
+		
+
+		<a href="#cur-wish-dialog" id="fire-cur-wish-pop" class="hide">fire</a>
+		<a href="#" id="close-cur-wish-pop" class="close-cur-wish-pop">x</a>
+		<form action="/currencyWishes/captureCurrencyWish" method="post" name="curWishListForm" id="curWishListForm">
+			<div class="cw-title">
+				New currencies are coming soon to TransferWise.
+			</div>
+			<div class="main-body">
+				<div class="regular-p mtop10">
+					Want to be first to know?
+				</div>
+				<div class="regular-p">
+					Enter a few details below and you'll receive an email when there's good news.
+				</div>
+
+				<div class="errors hide"></div>
+
+				<hr>
+				<ul class="select-row">
+					<li class="source-cell">
+						<label>I want to send money from</label>
+						
+						<div class="cur-background ">
+							<select name="currencyFrom" class="currencyFrom" id="currencyFrom">
+<option value="" selected="selected">Please select currency</option>
+<option value="ALL">Albanian lek</option>
+<option value="AMD">Armenian dram</option>
+<option value="AUD">Australian dollar</option>
+<option value="AZN">Azerbaijani manat</option>
+<option value="BDT">Bangladeshi Taka</option>
+<option value="BYR">Belarusian ruble</option>
+<option value="BAM">Bosnian convertible mark</option>
+<option value="BRL">Brazil Real</option>
+<option value="GBP">British Pounds</option>
+<option value="BGN">Bulgarian Lev</option>
+<option value="KHR">Cambodian riel</option>
+<option value="CAD">Canadian dollar</option>
+<option value="CLP">Chilean Peso</option>
+<option value="CNY">Chinese yuan</option>
+<option value="COP">Colombia Peso</option>
+<option value="CRC">Costa Rica Colon</option>
+<option value="HRK">Croatian kuna</option>
+<option value="CZK">Czech Koruna</option>
+<option value="DKK">Danish krone</option>
+<option value="EGP">Egyptian pound</option>
+<option value="ETB">Ethiopian birr</option>
+<option value="EUR">Euro</option>
+<option value="GEL">Georgian lari</option>
+<option value="GHS">Ghana Cedis</option>
+<option value="GTQ">Guatemala Quetzal</option>
+<option value="HKD">Hong Kong Dollar</option>
+<option value="HUF">Hungarian Forint</option>
+<option value="ISK">Icelandic króna</option>
+<option value="INR">Indian Rupee</option>
+<option value="IDR">Indonesian Rupiah</option>
+<option value="IRR">Iranian rial</option>
+<option value="ILS">Israeli shekel</option>
+<option value="JMD">Jamaican dollar</option>
+<option value="JPY">Japanese yen</option>
+<option value="KES">Kenyan Shilling</option>
+<option value="KRW">Korea (South) Won</option>
+<option value="KWD">Kuwaiti dinar</option>
+<option value="KGS">Kyrgyzstan Som</option>
+<option value="LBP">Lebanon Pound</option>
+<option value="LRD">Liberia Dollar</option>
+<option value="MKD">Macedonian denar</option>
+<option value="MYR">Malaysian Ringgit</option>
+<option value="MUR">Mauritian rupee</option>
+<option value="MXN">Mexican Peso</option>
+<option value="MAD">Moroccan Dirham</option>
+<option value="MMK">Myanmar kyat</option>
+<option value="RON">New Romanian Leu</option>
+<option value="NZD">New Zealand Dollar</option>
+<option value="NGN">Nigeria Naira</option>
+<option value="NOK">Norwegian krone</option>
+<option value="PKR">Pakistan Rupee</option>
+<option value="PEN">Peru Nuevo Sol</option>
+<option value="PHP">Philippine Peso</option>
+<option value="PLN">Polish Zloty</option>
+<option value="QAR">Qatar Riyal</option>
+<option value="RUB">Russian Rouble</option>
+<option value="SAR">Saudi Arabia Riyal</option>
+<option value="RSD">Serbian dinar</option>
+<option value="SGD">Singapore Dollar</option>
+<option value="ZAR">South African Rand</option>
+<option value="LKR">Sri Lanka Rupee</option>
+<option value="SDG">Sudanese Pound</option>
+<option value="SEK">Swedish krona</option>
+<option value="CHF">Swiss franc</option>
+<option value="TWD">Taiwan New Dollar</option>
+<option value="TZS">Tanzanian shilling</option>
+<option value="THB">Thai Baht</option>
+<option value="TRY">Turkish Lira</option>
+<option value="UGX">Ugandan Shilling</option>
+<option value="UAH">Ukrainian hryvnia</option>
+<option value="AED">United Arab Emirates Dirham</option>
+<option value="USD">United States dollar</option>
+<option value="UYU">Uruguayan peso</option>
+<option value="VND">Viet Nam Dong</option>
+<option value="CFA">West African CFA franc</option>
+</select>
+						</div>
+					</li>
+					<li class="arrow-cell"></li>
+					<li class="target-cell">
+						<label>To</label>
+						
+						<div class="cur-background ">
+							<select name="currencyTo" class=" currencyTo" id="currencyTo">
+<option value="" selected="selected">Please select currency</option>
+<option value="ALL">Albanian lek</option>
+<option value="AMD">Armenian dram</option>
+<option value="AUD">Australian dollar</option>
+<option value="AZN">Azerbaijani manat</option>
+<option value="BDT">Bangladeshi Taka</option>
+<option value="BYR">Belarusian ruble</option>
+<option value="BAM">Bosnian convertible mark</option>
+<option value="BRL">Brazil Real</option>
+<option value="GBP">British Pounds</option>
+<option value="BGN">Bulgarian Lev</option>
+<option value="KHR">Cambodian riel</option>
+<option value="CAD">Canadian dollar</option>
+<option value="CLP">Chilean Peso</option>
+<option value="CNY">Chinese yuan</option>
+<option value="COP">Colombia Peso</option>
+<option value="CRC">Costa Rica Colon</option>
+<option value="HRK">Croatian kuna</option>
+<option value="CZK">Czech Koruna</option>
+<option value="DKK">Danish krone</option>
+<option value="EGP">Egyptian pound</option>
+<option value="ETB">Ethiopian birr</option>
+<option value="EUR">Euro</option>
+<option value="GEL">Georgian lari</option>
+<option value="GHS">Ghana Cedis</option>
+<option value="GTQ">Guatemala Quetzal</option>
+<option value="HKD">Hong Kong Dollar</option>
+<option value="HUF">Hungarian Forint</option>
+<option value="ISK">Icelandic króna</option>
+<option value="INR">Indian Rupee</option>
+<option value="IDR">Indonesian Rupiah</option>
+<option value="IRR">Iranian rial</option>
+<option value="ILS">Israeli shekel</option>
+<option value="JMD">Jamaican dollar</option>
+<option value="JPY">Japanese yen</option>
+<option value="KES">Kenyan Shilling</option>
+<option value="KRW">Korea (South) Won</option>
+<option value="KWD">Kuwaiti dinar</option>
+<option value="KGS">Kyrgyzstan Som</option>
+<option value="LBP">Lebanon Pound</option>
+<option value="LRD">Liberia Dollar</option>
+<option value="MKD">Macedonian denar</option>
+<option value="MYR">Malaysian Ringgit</option>
+<option value="MUR">Mauritian rupee</option>
+<option value="MXN">Mexican Peso</option>
+<option value="MAD">Moroccan Dirham</option>
+<option value="MMK">Myanmar kyat</option>
+<option value="RON">New Romanian Leu</option>
+<option value="NZD">New Zealand Dollar</option>
+<option value="NGN">Nigeria Naira</option>
+<option value="NOK">Norwegian krone</option>
+<option value="PKR">Pakistan Rupee</option>
+<option value="PEN">Peru Nuevo Sol</option>
+<option value="PHP">Philippine Peso</option>
+<option value="PLN">Polish Zloty</option>
+<option value="QAR">Qatar Riyal</option>
+<option value="RUB">Russian Rouble</option>
+<option value="SAR">Saudi Arabia Riyal</option>
+<option value="RSD">Serbian dinar</option>
+<option value="SGD">Singapore Dollar</option>
+<option value="ZAR">South African Rand</option>
+<option value="LKR">Sri Lanka Rupee</option>
+<option value="SDG">Sudanese Pound</option>
+<option value="SEK">Swedish krona</option>
+<option value="CHF">Swiss franc</option>
+<option value="TWD">Taiwan New Dollar</option>
+<option value="TZS">Tanzanian shilling</option>
+<option value="THB">Thai Baht</option>
+<option value="TRY">Turkish Lira</option>
+<option value="UGX">Ugandan Shilling</option>
+<option value="UAH">Ukrainian hryvnia</option>
+<option value="AED">United Arab Emirates Dirham</option>
+<option value="USD">United States dollar</option>
+<option value="UYU">Uruguayan peso</option>
+<option value="VND">Viet Nam Dong</option>
+<option value="CFA">West African CFA franc</option>
+</select>
+						</div>
+					</li>
+				</ul>
+				<div class="clear"></div>
+				<div class="top20 name-wrap">
+					<label for="name">Name</label>
+					
+					<input type="text" name="name" class="" id="name" value="">
+				</div>
+
+				<div class="top20 name-wrap">
+					<label for="emailAddress">Email Address</label>
+					
+					<input type="email" name="email" value="" class="left mright20 " id="emailAddress" placeholder="name@domain.com">
+				</div>
+			</div>
+			<br>
+
+			<input type="submit" name="submit" class="b-button button big green left submit-curr-wish" value="All done" id="submit">
+
+			<div class="clear"></div>
+		</form>
+
+		<form action="/currencyWishes/addFriends" method="post" name="addFriendsForm" class="top10 hide" id="addFriendsForm">
+			<div class="main-body">
+				<h3>Wise choice, thanks for your interest</h3>
+				<h2>
+					<div class="regular-p add-friends-subhead">
+						Do you know someone else who'd like low cost money transfers between <b>{{currencyFrom}}</b> and <b>{{currencyTo}}</b>?
+					</div>
+					<div class="regular-p">
+						Enter their email and we'll also add them to the early access list.
+					</div>
+				</h2>
+				<hr>
+				<div class="clear">
+					<div class="message hide"></div>
+					<div class="errors hide"></div>
+
+					<label for="emailsInput" class="email-label" title="Add friends to the list:">Add friends to the list:</label>
+					<textarea id="emailsInput" value="" name="emails" placeholder="cur.wish.dialog.emails.input.placeholder" class="emails-input mbot20 cw-normal" onkeydown="textAreaHeight(this)" autocorrect="off" autocapitalize="off"></textarea>
+					<div class="clear"></div>
+					<br>
+
+					<input type="submit" name="submit" class="b-button submit-add-friends button green left mleft20" value="Add them" id="submit">
+				</div>
+				<div class="clear"></div>
+			</div>
+		</form>
+
+		<div class="main-body">
+			<hr>
+			<div class="regular-p">
+				<span class="medium-dark-blue">TransferWise.</span>
+				Finally, money without borders
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/assets/mustache/mustache-73e57f3ce3c9373d7c9031dec5caa6e8.js" type="text/javascript"></script>
+
+
+
+
+	<script src="/assets/landing/initiate-3bbb67deb8b66831af16721061a1a0c1.js" type="text/javascript"></script>
+	<script src="/assets/trackingScripts/block.home.page.pixels-d2ed86f9f2150214164b31c970001900.js" type="text/javascript"></script>
+	
+
+	
+
+
+	
+
+	
+
+<div class="clear"></div>
+
+
+
+
+
+<footer class="b-footer">
+	<div class="l-container">
+		<div class="l-row">
+			<nav class="b-footer__nav l-span-18">
+				<ul class="l-row">
+					<li class="b-footer__nav-group l-span-8">
+						<a href="/about" class="b-footer__nav-group-title">Company &amp; Team</a>
+						<ul class="b-footer__nav-list">
+							<li class="b-footer__nav-list-item"><a href="/about">Company &amp; Team</a></li>
+							<li class="b-footer__nav-list-item"><a href="/blog">News &amp; Blog</a></li>
+							<li class="b-footer__nav-list-item"><a href="/media-and-awards">
+								Press</a></li>
+							<li class="b-footer__nav-list-item"><a href="/jobs">Careers</a></li>
+						</ul>
+					</li>
+					<li class="b-footer__nav-group l-span-8">
+						<a href="/faq" class="b-footer__nav-group-title">Help &amp; Support</a>
+						<ul class="b-footer__nav-list">
+							<li class="b-footer__nav-list-item"><a href="/faq/showOnDesk/how-do-i-set-up-a-transfer">Getting started</a></li>
+							<li class="b-footer__nav-list-item"><a href="/faq/showOnDesk/how-much-does-it-cost">Pricing</a></li>
+							<li class="b-footer__nav-list-item"><a href="/faq/showOnDesk/supported-currencies">Supported currencies</a></li>
+							<li class="b-footer__nav-list-item"><a href="/cheapest-money-transfer-guaranteed">Best Price Guarantee</a></li>
+							<li class="b-footer__nav-list-item"><a href="/faq">FAQ</a></li>
+						</ul>
+					</li>
+					<li class="b-footer__nav-group l-span-8">
+						<div class="b-footer__nav-group-title">Countries &amp; Currencies</div>
+						<ul class="b-footer__nav-list">
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-the-uk">Transfer money to the UK</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-the-usa">Transfer money to the USA</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-france">Transfer money to France</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-spain">Transfer money to Spain</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-poland">Transfer money to Poland</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-europe">Transfer money to Europe</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-italy">Transfer money to Italy</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-germany">Transfer money to Germany</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-ireland">Transfer money to Ireland</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-portugal">Transfer money to Portugal</a></li>
+							<li class="b-footer__nav-list-item"><a href="/transfer-money-to-india">Transfer money to India</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="b-footer__contact l-span-5 l-push-1">
+				<div class="b-footer__contact-title">
+					<a href="/get-in-touch">
+						Contact
+					</a>
+				</div>
+
+				<div class="b-footer__contact-item"><a href="mailto:support@transferwise.com">support@transferwise.com</a></div>
+
+				<div class="b-footer__contact-item">
+					
+					UK: +44 (0) 203 6950 999<br>
+					US: +1 888 908 3833<br>
+					DE: +49 3022 403 02 08<br>
+					<a href="/get-in-touch">
+						More ways
+					</a>
+				</div>
+			</div>
+		</div>
+		<ul class="b-footer__social">
+			<li class="b-footer__social-item m-twitter">
+				<a href="https://twitter.com/transferwise" target="blank">Twitter</a>
+			</li>
+			<li class="b-footer__social-item m-facebook">
+				<a href="https://www.facebook.com/transferwise" target="blank">Facebook</a>
+			</li>
+			<li class="b-footer__social-item m-gplus">
+				<a href="https://plus.google.com/104977458125119375235/posts" target="blank">Google +</a>
+			</li>
+		</ul>
+		<ul class="b-footer__apps l-hide-mobile">
+			<li class="b-footer__apps-item m-ios">
+				
+					<a href="https://itunes.apple.com/gb/app/transferwise-money-transfer/id612261027" target="blank">iOS</a>
+				
+			</li>
+			<li class="b-footer__apps-item m-android">
+				<a href="https://play.google.com/store/apps/details?id=com.transferwise.android" target="blank">Android</a>
+			</li>
+		</ul>
+		<div class="b-footer__legal">
+			<p>© TransferWise Ltd 2015 &nbsp;
+			
+				<a href="/terms-of-use">Terms of use</a>
+			&nbsp;
+			<a href="/privacy-policy">Privacy policy</a>&nbsp;
+			<a href="/cookie-policy">Cookie policy</a>&nbsp;
+			
+
+			</p><section class="b-hmrc-modal" id="b-hmrc-modal" style="display: none">
+    <h1 class="b-hmrc-modal__header">TransferWise HMRC Registration</h1>
+    <div class="b-hmrc-modal__content">
+        <div class="b-hmrc-modal__text">
+            <p>TransferWise is a registered money service business. You can view the registration with Her Majesty's Revenue and Customs using the Supervised Businesses Register on the HMRC website.</p>
+            <p>Simply visit the
+                <a href="https://customs.hmrc.gov.uk/msbregister/checkTerms.do" target="_blank" class="b-hmrc-modal__link">
+                    HMRC Search Tool</a>
+                and enter the details below:
+            </p>
+        </div>
+        <table class="b-hmrc-modal__table">
+            <tbody><tr>
+                <td>Company Name</td>
+                <td>TransferWise Ltd.</td>
+                <td class="b-hmrc-modal__copy-column-cell">
+                    <button class="b-hmrc-modal__copy-button js-hmrc-modal__copy-button" data-clipboard-text="TransferWise Ltd.">
+                        <span class="b-hmrc-modal__copy-text">
+                            Copy to Clipboard
+                        </span>
+                        <span class="b-hmrc-modal__copied-text">
+                            Copied to Clipboard!
+                        </span>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Registration Number</td>
+                <td>12591871</td>
+                <td class="b-hmrc-modal__copy-column-cell">
+                    <button class="b-hmrc-modal__copy-button js-hmrc-modal__copy-button" data-clipboard-text="12591871">
+                        <span class="b-hmrc-modal__copy-text">
+                            Copy to Clipboard
+                        </span>
+                        <span class="b-hmrc-modal__copied-text">
+                            Copied to Clipboard!
+                        </span>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Post Code</td>
+                <td>EC1V 2NT</td>
+                <td class="b-hmrc-modal__copy-column-cell">
+                    <button class="b-hmrc-modal__copy-button js-hmrc-modal__copy-button" data-clipboard-text="EC1V 2NT">
+                        <span class="b-hmrc-modal__copy-text">
+                            Copy to Clipboard
+                        </span>
+                        <span class="b-hmrc-modal__copied-text">
+                            Copied to Clipboard!
+                        </span>
+                    </button>
+                </td>
+            </tr>
+        </tbody></table>
+        <a href="https://customs.hmrc.gov.uk/msbregister/checkTerms.do" target="_blank" class="b-hmrc-modal__link b-button m-small">
+            Search Now</a>
+    </div>
+</section>
+
+			<p>
+				TransferWise is a registered money service business. Her Majesty's Revenue and Customs certificate number <a href="#b-hmrc-modal" id="fire-hmrc-modal">12591871</a>.
+				<br>
+				We are fully authorised by the UK Financial Conduct Authority (FCA) as a payments institution with reference <a href="http://www.fsa.gov.uk/register/psdFirmRefSearch.do?firmRef=571669" onclick="window.open(this.href);return false;">571669</a>.
+
+			</p>
+		</div>
+	</div>
+	<script>
+		$('#fire-hmrc-modal').click(function () {
+			if (typeof LogUtils !== 'undefined') {
+				LogUtils.sendGoogleAnalyticsEvent('footer', 'click_hmrc_number');
+			}
+		});
+		jQuery('.m-ios').click(function() {
+			if (typeof LogUtils !== 'undefined') {
+				LogUtils.sendGoogleAnalyticsEvent('footer', 'ios_app_button_click');
+			}
+		})
+		jQuery('.m-android').click(function() {
+			if (typeof LogUtils !== 'undefined') {
+				LogUtils.sendGoogleAnalyticsEvent('footer', 'android_app_button_click');
+			}
+		})
+	</script>
+</footer><script type="text/javascript" id="" src="//platform.twitter.com/oct.js"></script><script type="text/javascript" id="">$(function(){var a=$("html").attr("lang");window.optimizely=window.optimizely||[];window.optimizely.push(["customTag","userLang",a])});</script><script type="text/javascript" id="" src="//platform.twitter.com/oct.js"></script><script type="text/javascript" id="">window.optimizely=window.optimizely||[];window.optimizely.push(["activateUniversalAnalytics"]);</script><script type="text/javascript" id="">var str="",str=str+'\x3csection class\x3d"b-exit-survey" id\x3d"b-exit-survey" style\x3d"display:none"\x3e',str=str+'\x3cdiv class\x3d"b-exit-survey__close js-close"\x3e\x3c/div\x3e',str=str+'\x3cform action\x3d"https://docs.google.com/forms/d/1KUQWEtXGvxzIcdYw7KkJJHztEJctd5zbl9y_DzhcO2c/formResponse?embedded\x3dtrue" method\x3d"POST" id\x3d"ss-form" class\x3d"b-exit-survey__form js-exit-survey-form js-exit-survey__form" onsubmit\x3d"submitted\x3dtrue" target\x3d"hidden_iframe"\x3e',str=str+'\x3cinput type\x3d"radio" name\x3d"entry.2096450227" value\x3d"Yes" id\x3d"group_2096450227_1" class\x3d"ss-q-radio" style\x3d"display:none"\x3e',
+str=str+'\x3cinput type\x3d"radio" name\x3d"entry.2096450227" value\x3d"No" id\x3d"group_2096450227_2" class\x3d"ss-q-radio" style\x3d"display:none"\x3e',str=str+'\x3cinput type\x3d"hidden" name\x3d"entry.70580252" value\x3d"" class\x3d"ss-q-short valid" id\x3d"hidden_mixpanel_id" dir\x3d"auto" title\x3d""\x3e',str=str+'\x3cinput type\x3d"hidden" name\x3d"entry.954292230" value\x3d"" class\x3d"ss-q-short valid" id\x3d"hidden_ga_experiments" title\x3d""\x3e',str=str+'\x3cinput type\x3d"hidden" name\x3d"entry.1627946966" value\x3d"" class\x3d"ss-q-short valid" id\x3d"hidden_optimizely_buckets" title\x3d""\x3e',
+str=str+'\x3cdiv class\x3d"b-exit-survey__content m-one"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eWe\'d love to hear your thoughts\x3c/h1\x3e',str=str+"\x3cp\x3eHave you ever sent money abroad with TransferWise?\x3c/p\x3e",str=str+'\x3cul class\x3d"b-exit-survey__choices m-old-user"\x3e',str=str+"\x3cli\x3e",str=str+'\x3cinput type\x3d"button" name\x3d"submit" value\x3d"Yes" id\x3d"ss-submit" class\x3d"b-exit-survey__button m-yes js-tw-before-yes"\x3e',str=str+"\x3c/li\x3e",str=str+
+"\x3cli\x3e",str=str+'\x3cinput type\x3d"button" name\x3d"button" value\x3d"No" id\x3d"sssubmit" class\x3d"b-exit-survey__button m-no js-tw-before-no"\x3e',str=str+"\x3c/li\x3e",str=str+"\x3c/ul\x3e",str=str+"\x3c/div\x3e",str=str+'\x3cdiv class\x3d"b-exit-survey__content m-two" style\x3d"display:none"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eHow was your experience?\x3c/h1\x3e',str=str+'\x3ctextarea name\x3d"entry.695726242" id\x3d"entry_695726242"class\x3d"b-exit-survey__textarea" placeholder\x3d"Your typed thoughts here..."\x3e\x3c/textarea\x3e',
+str=str+'\x3cinput type\x3d"button" name\x3d"submit" value\x3d"Submit" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-form-finish"\x3e',str=str+"\x3c/div\x3e",str=str+'\x3cdiv class\x3d"b-exit-survey__content m-intent" style\x3d"display:none"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eAre you looking to make a transfer today?\x3c/h1\x3e',str=str+'\x3cul class\x3d"b-exit-survey__choices ss-choices" role\x3d"radiogroup"\x3e',str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.1949779412" value\x3d"Yes" role\x3d"radio" id\x3d"group_1949779412_1"\x3e',
+str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eYes\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.1949779412" id\x3d"group_1949779412_2" value\x3d"No" role\x3d"radio"\x3e',str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eNo\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3c/ul\x3e",str=str+'\x3cinput type\x3d"button" name\x3d"submit" value\x3d"Next" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-intent-next"\x3e',
+str=str+"\x3c/div\x3e",str=str+'\x3cdiv class\x3d"b-exit-survey__content m-choices" style\x3d"display:none"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eWhat\'s your main concern about using TransferWise?\x3c/h1\x3e',str=str+'\x3cul class\x3d"b-exit-survey__choices ss-choices" role\x3d"radiogroup"\x3e',str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" value\x3d"I don\'t know what I have to do to get started" role\x3d"radio" id\x3d"group_278317660_1"\x3e',
+str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eI don\'t know what I have to do to get started\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" id\x3d"group_278317660_2" value\x3d"I don\'t know what I have to do in the whole process" role\x3d"radio"\x3e',str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eI don\'t know what I have to do in the whole process\x3c/span\x3e',
+str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" value\x3d"I don\'t know how you are able to offer such low fees" role\x3d"radio" id\x3d"group_278317660_3"\x3e',str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eI don\'t know how you are able to offer such low fees\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" value\x3d"I don\'t know where I can send money to" role\x3d"radio" id\x3d"group_278317660_4"\x3e',
+str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eI don\'t know where I can send money to\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" value\x3d"I don\'t know whether I can trust this" role\x3d"radio" id\x3d"group_278317660_5"\x3e',str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eI don\'t know whether I can trust this\x3c/span\x3e',str=str+"\x3c/label\x3e",
+str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" value\x3d"I don\'t know where to find out more" role\x3d"radio" id\x3d"group_278317660_6"\x3e',str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eI don\'t know where to find out more\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" value\x3d"I don\'t know your rate/fees" role\x3d"radio" id\x3d"group_278317660_7"\x3e',
+str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eI don\'t know your rate/fees\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" name\x3d"entry.278317660" value\x3d"I don\'t know how much I\'ll save" role\x3d"radio" id\x3d"group_278317660_8"\x3e',str=str+"\x3cspan class\x3d\"b-exit-survey__choices-label\"\x3eI don't know how much I'll save\x3c/span\x3e",str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",
+str=str+"\x3cli\x3e",str=str+"\x3clabel\x3e",str=str+'\x3cinput type\x3d"radio" id\x3d"group_278317660_5" name\x3d"entry.278317660" value\x3d"Something else" role\x3d"radio"\x3e',str=str+'\x3cspan class\x3d"b-exit-survey__choices-label"\x3eSomething else\x3c/span\x3e',str=str+"\x3c/label\x3e",str=str+"\x3c/li\x3e",str=str+"\x3c/ul\x3e",str=str+'\x3cinput type\x3d"button" name\x3d"submit" value\x3d"Next" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-choices-next"\x3e',str=str+"\x3c/div\x3e",
+str=str+'\x3cdiv class\x3d"b-exit-survey__content m-other" style\x3d"display:none"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eWhat concern\'s you about using TransferWise?\x3c/h1\x3e',str=str+'\x3ctextarea name\x3d"entry.1484800884" id\x3d"entry_1484800884"class\x3d"b-exit-survey__textarea" placeholder\x3d"Your typed thoughts here..."\x3e\x3c/textarea\x3e',str=str+'\x3cinput type\x3d"button" name\x3d"submit" value\x3d"Submit" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-form-finish"\x3e',
+str=str+"\x3c/div\x3e",str=str+'\x3cdiv class\x3d"b-exit-survey__content m-details" style\x3d"display:none"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eWhy is this your main concern?\x3c/h1\x3e',str=str+'\x3ctextarea name\x3d"entry.922964028" id\x3d"entry_922964028" class\x3d"b-exit-survey__textarea" placeholder\x3d"Your typed thoughts here..."\x3e\x3c/textarea\x3e',str=str+'\x3cinput type\x3d"button" name\x3d"submit" value\x3d"Submit" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-form-finish"\x3e',
+str=str+"\x3c/div\x3e",str=str+'\x3cdiv class\x3d"b-exit-survey__content m-email" style\x3d"display:none"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eHappy to chat about this some other time?\x3c/h1\x3e',str=str+"\x3cp\x3eLeave your email - we'll get back to you\x3c/p\x3e",str=str+'\x3cinput type\x3d"text" name\x3d"entry.931406229" id\x3d"entry_931406229" id\x3d"sssubmit" class\x3d"b-exit-survey__email" placeholder\x3d"Your email address"\x3e',str=str+'\x3cinput type\x3d"submit" name\x3d"submit" value\x3d"Submit" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-submit-email"\x3e',
+str=str+"\x3c/div\x3e",str=str+'\x3cdiv class\x3d"b-exit-survey__content m-end" style\x3d"display:none"\x3e',str=str+'\x3ch1 class\x3d"b-exit-survey__title"\x3eThanks for your feedback\x3c/h1\x3e',str=str+'\x3cinput type\x3d"button" name\x3d"close-window" value\x3d"Close" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-close-window"\x3e',str=str+'\x3cinput type\x3d"submit" name\x3d"submit" value\x3d"Close" id\x3d"sssubmit" class\x3d"b-exit-survey__submit js-submit" style\x3d"display:none" \x3e',
+str=str+"\x3c/div\x3e",str=str+"\x3c/div\x3e",str=str+"\x3c/form\x3e",str=str+"\x3c/section\x3e";$("body").append(str);
+$(document).ready(function(){var c=$(".b-exit-survey__content");$(".js-tw-before-yes").click(function(){c.hide();$("#group_2096450227_1").prop("checked",!0);$(".b-exit-survey__content.m-two").show()});$(".js-tw-before-no").click(function(){c.hide();$("#group_2096450227_2").prop("checked",!0);$(".b-exit-survey__content.m-intent").show()});$(".js-form-finish").click(function(){c.hide();$(".b-exit-survey__content.m-email").show()});$(".js-intent-next").click(function(){c.hide();$(".b-exit-survey__content.m-choices").show()});
+$(".js-choices-next").click(function(){c.hide();var b=$('[name\x3d"entry.437585711"]:checked').val();"Something else"==b?$(".b-exit-survey__content.m-other").show():$(".b-exit-survey__content.m-details").show()});$(".js-close, .js-submit-email").click(function(){"undefined"!==typeof $('[name\x3d"entry.2096450227"]:checked').val()?(c.hide(),$(".b-exit-survey__content.m-end").show(),console.log("js-submit force click;"),$(".js-submit").click()):$(".b-exit-survey").hide()});$(".js-close-window").click(function(){$(".b-exit-survey").hide()})});
+function ExitSurveyModule(c,b){function f(a,b){return"undefined"===typeof a?b:a}function m(a){a*=864E5;var b=new Date;b.setTime(b.getTime()+a);return"; expires\x3d"+b.toUTCString()}function C(){D||/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())||g.addEventListener("scroll",n)}function n(a){l=!0;setInterval(function(){if(l){l=!1;var a=$(g).scrollTop(),b=$(document).height(),c=$(g).height();a/(b-c)*100>=E&&(d.addEventListener("mouseleave",p),d.addEventListener("mouseenter",
+q),d.addEventListener("keydown",r),g.removeEventListener("scroll",n))}},500)}function p(a){(a=a.clientY>F)||(a=h,a=(a="true"===k()[a])&&!t);a||(e=setTimeout(u,v))}function q(a){e&&(clearTimeout(e),e=null)}function r(a){var b;(b=w)||(b=h,b=(b="true"===k()[b])&&!t);!b&&a.metaKey&&76===a.keyCode&&(w=!0,e=setTimeout(u,v))}function k(){for(var a=document.cookie.split("; "),b={},c=a.length-1;0<=c;c--){var d=a[c].split("\x3d");b[d[0]]=d[1]}return b}function u(){x();G()}function x(){c&&(c.style.display="block");
+y()}function y(a){a=a||{};"undefined"!==typeof a.cookieExpire&&(z=m(a.cookieExpire));!0===a.sitewide&&(A=";path\x3d/");"undefined"!==typeof a.cookieDomain&&(B=";domain\x3d"+a.cookieDomain);"undefined"!==typeof a.cookieName&&(h=a.cookieName);document.cookie=h+"\x3dtrue"+z+B+A;d.removeEventListener("mouseleave",p);d.removeEventListener("mouseenter",q);d.removeEventListener("keydown",r);a=k().exp.split("\x26");a.shift();$("#hidden_ga_experiments").val(a);$("#hidden_optimizely_buckets").val(decodeURIComponent(k().optimizelyBuckets))}
+b=b||{};var t=b.aggressive||!1,F=f(b.sensitivity,50),H=f(b.timer,1E3),v=f(b.delay,0),G=b.callback||function(){},z=m(b.cookieExpire)||"",B=b.cookieDomain?";domain\x3d"+b.cookieDomain:"",h=b.cookieName?b.cookieName:"viewedTWModal",A=!0===b.sitewide?";path\x3d/":"",E=20;f(b.percentage,100);var D=b.includeMobile||!1,e=null,d=document.documentElement,g=window,l=!1;setTimeout(C,H);var w=!1;return{fire:x,disable:y}}
+function exitSurveyCallBack(){"undefined"==typeof mixpanel.get_property("isRegistered")&&($(".b-exit-survey").show(),$("#hidden_mixpanel_id").val(mixpanel.get_distinct_id()),mixpanel.track("Exit Survey displayed",{seenExitSurvey:!0}),$(".js-exit-survey-form").submit(function(){var c=localStorage.getItem("userIdNo");c||(c=Math.round(1E9*Math.random()),localStorage.setItem("userIdNo",c));mixpanel.alias(c+"@anonymous.com");mixpanel.people.set({$email:c+"@anonymous.com",exitSurveySubmitted:!0});mixpanel.track("Exit Survey submitted!",
+{exitSurveySubmitted:!0})}))}ExitSurveyModule(null,{callback:exitSurveyCallBack,percentage:50,delay:100});submitted=!1;$("body").append('\x3ciframe id\x3d"hidden_iframe" name\x3d"hidden_iframe" onload\x3d"if(submitted){window.location\x3d\'https://transferwise.com\';}" style\x3d"display: none;"\x3e\x3c/iframe\x3e');</script><section class="b-exit-survey" id="b-exit-survey" style="display:none"><div class="b-exit-survey__close js-close"></div><form action="https://docs.google.com/forms/d/1KUQWEtXGvxzIcdYw7KkJJHztEJctd5zbl9y_DzhcO2c/formResponse?embedded=true" method="POST" id="ss-form" class="b-exit-survey__form js-exit-survey-form js-exit-survey__form" onsubmit="submitted=true" target="hidden_iframe"><input type="radio" name="entry.2096450227" value="Yes" id="group_2096450227_1" class="ss-q-radio" style="display:none"><input type="radio" name="entry.2096450227" value="No" id="group_2096450227_2" class="ss-q-radio" style="display:none"><input type="hidden" name="entry.70580252" value="" class="ss-q-short valid" id="hidden_mixpanel_id" dir="auto" title=""><input type="hidden" name="entry.954292230" value="" class="ss-q-short valid" id="hidden_ga_experiments" title=""><input type="hidden" name="entry.1627946966" value="" class="ss-q-short valid" id="hidden_optimizely_buckets" title=""><div class="b-exit-survey__content m-one"><h1 class="b-exit-survey__title">We'd love to hear your thoughts</h1><p>Have you ever sent money abroad with TransferWise?</p><ul class="b-exit-survey__choices m-old-user"><li><input type="button" name="submit" value="Yes" id="ss-submit" class="b-exit-survey__button m-yes js-tw-before-yes"></li><li><input type="button" name="button" value="No" id="sssubmit" class="b-exit-survey__button m-no js-tw-before-no"></li></ul></div><div class="b-exit-survey__content m-two" style="display:none"><h1 class="b-exit-survey__title">How was your experience?</h1><textarea name="entry.695726242" id="entry_695726242" class="b-exit-survey__textarea" placeholder="Your typed thoughts here..."></textarea><input type="button" name="submit" value="Submit" id="sssubmit" class="b-exit-survey__submit js-form-finish"></div><div class="b-exit-survey__content m-intent" style="display:none"><h1 class="b-exit-survey__title">Are you looking to make a transfer today?</h1><ul class="b-exit-survey__choices ss-choices" role="radiogroup"><li><label><input type="radio" name="entry.1949779412" value="Yes" role="radio" id="group_1949779412_1"><span class="b-exit-survey__choices-label">Yes</span></label></li><li><label><input type="radio" name="entry.1949779412" id="group_1949779412_2" value="No" role="radio"><span class="b-exit-survey__choices-label">No</span></label></li></ul><input type="button" name="submit" value="Next" id="sssubmit" class="b-exit-survey__submit js-intent-next"></div><div class="b-exit-survey__content m-choices" style="display:none"><h1 class="b-exit-survey__title">What's your main concern about using TransferWise?</h1><ul class="b-exit-survey__choices ss-choices" role="radiogroup"><li><label><input type="radio" name="entry.278317660" value="I don't know what I have to do to get started" role="radio" id="group_278317660_1"><span class="b-exit-survey__choices-label">I don't know what I have to do to get started</span></label></li><li><label><input type="radio" name="entry.278317660" id="group_278317660_2" value="I don't know what I have to do in the whole process" role="radio"><span class="b-exit-survey__choices-label">I don't know what I have to do in the whole process</span></label></li><li><label><input type="radio" name="entry.278317660" value="I don't know how you are able to offer such low fees" role="radio" id="group_278317660_3"><span class="b-exit-survey__choices-label">I don't know how you are able to offer such low fees</span></label></li><li><label><input type="radio" name="entry.278317660" value="I don't know where I can send money to" role="radio" id="group_278317660_4"><span class="b-exit-survey__choices-label">I don't know where I can send money to</span></label></li><li><label><input type="radio" name="entry.278317660" value="I don't know whether I can trust this" role="radio" id="group_278317660_5"><span class="b-exit-survey__choices-label">I don't know whether I can trust this</span></label></li><li><label><input type="radio" name="entry.278317660" value="I don't know where to find out more" role="radio" id="group_278317660_6"><span class="b-exit-survey__choices-label">I don't know where to find out more</span></label></li><li><label><input type="radio" name="entry.278317660" value="I don't know your rate/fees" role="radio" id="group_278317660_7"><span class="b-exit-survey__choices-label">I don't know your rate/fees</span></label></li><li><label><input type="radio" name="entry.278317660" value="I don't know how much I'll save" role="radio" id="group_278317660_8"><span class="b-exit-survey__choices-label">I don't know how much I'll save</span></label></li><li><label><input type="radio" id="group_278317660_5" name="entry.278317660" value="Something else" role="radio"><span class="b-exit-survey__choices-label">Something else</span></label></li></ul><input type="button" name="submit" value="Next" id="sssubmit" class="b-exit-survey__submit js-choices-next"></div><div class="b-exit-survey__content m-other" style="display:none"><h1 class="b-exit-survey__title">What concern's you about using TransferWise?</h1><textarea name="entry.1484800884" id="entry_1484800884" class="b-exit-survey__textarea" placeholder="Your typed thoughts here..."></textarea><input type="button" name="submit" value="Submit" id="sssubmit" class="b-exit-survey__submit js-form-finish"></div><div class="b-exit-survey__content m-details" style="display:none"><h1 class="b-exit-survey__title">Why is this your main concern?</h1><textarea name="entry.922964028" id="entry_922964028" class="b-exit-survey__textarea" placeholder="Your typed thoughts here..."></textarea><input type="button" name="submit" value="Submit" id="sssubmit" class="b-exit-survey__submit js-form-finish"></div><div class="b-exit-survey__content m-email" style="display:none"><h1 class="b-exit-survey__title">Happy to chat about this some other time?</h1><p>Leave your email - we'll get back to you</p><input type="text" name="entry.931406229" id="entry_931406229" class="b-exit-survey__email" placeholder="Your email address"><input type="submit" name="submit" value="Submit" id="sssubmit" class="b-exit-survey__submit js-submit-email"></div><div class="b-exit-survey__content m-end" style="display:none"><h1 class="b-exit-survey__title">Thanks for your feedback</h1><input type="button" name="close-window" value="Close" id="sssubmit" class="b-exit-survey__submit js-close-window"><input type="submit" name="submit" value="Close" id="sssubmit" class="b-exit-survey__submit js-submit" style="display:none"></div></form></section><iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted){window.location='https://transferwise.com';}" style="display: none;"></iframe><style>
+.b-exit-survey{
+	width: 415px;
+	color: white;
+	font-family: 'Avenir Next W01', 'Helvetica Neue', helvetica, arial, sans-serif;
+	position: fixed;
+	bottom: 0;
+	left: 10px;
+	z-index: 1000;
+	background-color: #364564;
+}
+.b-exit-survey__close {
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIAoJeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIAoJdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgCgllbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxOCAxOCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIKCWNsYXNzPSJiLWV4aXQtc3VydmV5X19jbG9zZS14Ij4KCQk8cG9seWdvbiBmaWxsPSIjZmZmIiBwb2ludHM9IjE4LDIgMTYsMCA5LDcgMiwwIDAsMiA3LDkgMCwxNiAyLDE4IDksMTEgMTYsMTggMTgsMTYgMTEsOSIvPgoJPC9zdmc+);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	float: right;
+	background-color: #364564;
+	width: 45px;
+	height: 35px;
+	cursor: pointer;
+	background-size: 30%;
+}
+.b-exit-survey__close-x {
+	margin: 10px auto;
+	display: block;
+}
+.b-exit-survey__content{
+	background-color: #364564;
+	padding: 0 25px 10px;
+	clear: both;
+}
+.b-exit-survey__title{
+	font-weight: 500;
+	font-size: 17px;
+	text-align: center;
+	padding-bottom: 10px;
+	border-bottom: 1px solid gray;
+	margin-bottom: 20px;
+}
+.b-exit-survey__content p {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+.b-exit-survey__textarea{
+	width: 100%;
+	height: 150px;
+	padding: 10px;
+	color: black;
+}
+.b-exit-survey__email{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	color: black;
+}
+.b-exit-survey__choices {
+	list-style: none;
+	padding: 0;
+	font-size: 14px;
+	overflow: auto;
+}
+.b-exit-survey__choices li {
+	margin-bottom: 10px;
+}
+.b-exit-survey__choices.m-old-user li {
+	float: left;
+	width: 50%;
+}
+.b-exit-survey__choices-label {
+	padding-left: 5px;
+}
+.b-exit-survey__submit, .b-exit-survey__button {
+	width: 100%;
+	background: #21B8F9;
+	border: none;
+	text-transform: uppercase;
+	color: white;
+	padding: 10px 0;
+	margin-top: 10px;
+	font-weight: 500;
+	font-family: 'Avenir Next W01', 'Helvetica Neue', helvetica, arial, sans-serif;
+}
+.b-exit-survey__button.m-yes{
+	background-color: #46d633;
+	margin: 0 5px;
+	width: 90%;
+}
+.b-exit-survey__button.m-no{
+	margin: 0 5px;
+	width: 90%;
+}
+.js-exit-survey-text{
+	color: black;
+	border: none;
+	width: 100%;
+	height: 30px;
+	padding-left: 5px;
+	margin-top: 5px;
+}
+.b-exit-survey__form{
+	margin: 0;
+}
+</style>
+<script type="text/javascript" id="">(function(a,c){if(window.optimizely&&window.optimizely.data&&window.optimizely.data.customTags&&"3for200usd"==window.optimizely.data.customTags.referralProgram){var b;a.hj=a.hj||function(){(a.hj.q=a.hj.q||[]).push(arguments)};a._hjSettings={hjid:26379,hjsv:3};b=c.createElement("script");b.async=1;b.src="//static.hotjar.com/c/hotjar-26379.js?sv\x3d3";c.getElementsByTagName("head")[0].appendChild(b)}})(window,document);</script><script type="application/ld+json">
+{ 
+  "@context" : "http://schema.org",
+  "@type" : "Organization",
+  "url" : "https://transferwise.com/",
+  "logo" : "https://transferwise.com/blog/wp-content/uploads/2014/09/Flag-transparent-background-e1410908731581.png",
+  "name" : "TransferWise",
+  "sameAs" : [ "https://twitter.com/transferwise",
+      "https://www.facebook.com/transferwise",
+      "https://plus.google.com/+Transferwise/" ] 
+}
+</script>
+
+
+
+<script src="/assets/main-8f22adcf596a00a93e4dbd1f729c2dde.js" type="text/javascript"></script>
+
+<script src="//www.google-analytics.com/cx/api.js"></script>
+
+
+
+<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-16492313-1']);
+	_gaq.push(['_setSampleRate', '100']);
+	
+
+	
+	
+
+	
+	
+	
+
+    // Optimizely Universal Analytics Integration
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push("activateUniversalAnalytics");
+
+	_gaq.push(['_trackPageview']);
+</script>
+
+
+	<script type="text/javascript">
+	// document.write(unescape("%3Cscript src='" + ((document.location.protocol=="https:")?"https://snapabug.appspot.com":"http://www.snapengage.com") + "/snapabug.js' type='text/javascript'%3E%3C/script%3E"));
+	(function () {
+		jQuery(document).on('ready', function () {
+			if (!DeviceUtils.isDesktop()) {
+				return;
+			}
+			var se = document.createElement('script');
+			se.type = 'text/javascript';
+			se.async = true;
+			se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/2284c885-c54d-47fb-8b5c-3f879a9ba526.js';
+
+			var done = false;
+			se.onload = se.onreadystatechange = function () {
+				if (!done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete')) {
+					done = true;
+
+					if (SnapABug) {
+						
+
+						SnapABug.setCallback('Open', function (agent) {
+							LogUtils.sendGoogleAnalyticsEventWithOption('Chat', 'live chat button is clicked', window.location.host + window.location.pathname);
+							LogUtils.trackMixpanelEvent('Chat - live chat is opened');
+						});
+
+						SnapABug.setCallback('StartChat', function (email, msg, type) {
+							LogUtils.sendGoogleAnalyticsEventWithOption('Chat', 'chat is started', window.location.host + window.location.pathname);
+							LogUtils.trackMixpanelEvent('Chat - chat is started');
+						});
+
+						$('#SnapABug_bImg').click(function () {
+							LogUtils.trackMixpanelEvent('Chat - live chat button is clicked');
+						});
+					}
+					if (typeof CalculatorHelpChatOpener != 'undefined') {
+						new CalculatorHelpChatOpener({selectors: [jQuery('select[name="sourceCurrencyId"]')]});
+					}
+				}
+			};
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(se, s);
+		});
+	})();
+</script>
+
+
+		
+		
+		
+		
+		
+		
+		
+			
+		
+		
+			
+		
+		
+			
+		
+
+
+
+	
+
+
+
+	
+		
+			
+				
+			
+		
+	
+
+
+
+
+
+
+
+<script>
+	jQuery(window).load(function() {
+		jQuery('body').append('<img style="display:none" src="//api.nanigans.com/event.php?app_id=66869&type=visit&name=landing"/>');
+	});
+</script>
+
+
+<script>
+	jQuery('.event_calc_make_a_transfer').click(function(){
+		jQuery('body').append('<img style="display:none" src="//api.nanigans.com/event.php?app_id=66869&type=user&name=getstarted"/>');
+	});
+</script>
+
+
+
+
+
+
+
+
+
+<noscript>&lt;img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=490451301059511&amp;amp;ev=NoScript" /&gt;</noscript>
+
+
+
+<script type="text/javascript">
+	jQuery.format.locale({
+	    number: {
+	        format: '#,###.0#',
+	        groupingSeparator: ',',
+	        decimalSeparator: '.'
+	    }
+	});
+
+		var calcWidget = "";
+		var exchangeCalculator = new ExchangeCalculator(jQuery('#calculateForm'), {
+			sourceZoneClass: 'source-currency-zone',
+			sourceCurrencyCode: 'js-source-currency-label',
+			targetCurrencyCode: 'js-target-currency-label',
+			sourceCurrencySymbol: 'source-currency-symbol',
+			targetCurrencySymbol: 'target-currency-symbol',
+			savingCurrencySymbol: 'js-saving-currency-symbol',
+			sourceValue: 'source-value',
+			targetValue: 'target-value',
+			savingValue: 'js-saving-amount',
+			fixTypeTarget: 'TARGET',
+			fixTypeSource: 'SOURCE',
+			calculateActionUrl: '/request/initiatePageRate?calculatorView=1&lang=en&invertSavings=',
+			currenciesData: {"msg":{"uplim":"Sorry, our current maximum online transfer is {{limit}} {{currencyCode}}.","lowlim":"The entered amount is too small to convert, please change it under You pay. Current minimum is {{limit}} {{currencyCode}}"},"ccy":{"2":{"cd":"gbp","rt":1,"lm":1000000.0,"tgt":{"1":{"cd":"eur","st":1,"lowl":1.0,"lm":1200000.0},"3":{"cd":"usd","st":3,"lowl":11.0},"4":{"cd":"pln","st":1,"lowl":1.0,"lm":5000000.0},"7":{"cd":"sek","st":3,"lowl":11.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":11.0,"lm":9000000.0},"6":{"cd":"nok","st":3,"lowl":11.0,"lm":9000000.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0,"lm":3.0E8},"15":{"cd":"gel","st":1,"lowl":1.0,"lm":2600000.0},"31":{"cd":"try","st":1,"lowl":1.0,"lm":3100000.0},"30":{"cd":"ron","st":1,"lowl":1.0,"lm":5300000.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"41":{"cd":"bgn","st":1,"lowl":1.0,"lm":2000000.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"1":{"cd":"eur","rt":1,"lm":1200000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"3":{"cd":"usd","st":3,"lowl":15.0},"4":{"cd":"pln","st":1,"lowl":1.0},"7":{"cd":"sek","st":3,"lowl":15.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":15.0},"6":{"cd":"nok","st":3,"lowl":15.0,"lm":9000000.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0,"lm":3.0E8},"15":{"cd":"gel","st":1,"lowl":1.0,"lm":2600000.0},"31":{"cd":"try","st":1,"lowl":1.0,"lm":3100000.0},"30":{"cd":"ron","st":1,"lowl":1.0,"lm":5300000.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"41":{"cd":"bgn","st":1,"lowl":1.0,"lm":2000000.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"3":{"cd":"usd","rt":1,"lm":1000000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0,"so":1},"1":{"cd":"eur","st":1,"lowl":1.0,"so":1},"4":{"cd":"pln","st":1,"lowl":1.0,"so":1},"7":{"cd":"sek","st":3,"lowl":17.0,"lm":220000.0,"so":1},"8":{"cd":"dkk","st":3,"lowl":17.0,"so":1},"6":{"cd":"nok","st":3,"lowl":17.0,"so":1},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0,"so":1},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0,"so":1},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0,"so":1},"14":{"cd":"huf","st":1,"lowl":1.0,"so":1},"15":{"cd":"gel","st":1,"lowl":1.0,"so":1},"31":{"cd":"try","st":1,"lowl":1.0,"so":1},"30":{"cd":"ron","st":1,"lowl":1.0,"so":1},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0,"so":1},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0,"so":1},"26":{"cd":"inr","st":1,"lowl":1.0,"so":1},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0,"so":1},"40":{"cd":"czk","st":1,"lowl":1.0,"so":1},"41":{"cd":"bgn","st":1,"lowl":1.0,"so":1},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0,"so":1},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0,"so":1},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0,"so":1},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0,"so":1},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0,"so":1},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"4":{"cd":"pln","rt":1,"lm":5000000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"1":{"cd":"eur","st":1,"lowl":1.0,"lm":1200000.0},"3":{"cd":"usd","st":3,"lowl":58.0},"7":{"cd":"sek","st":3,"lowl":58.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":58.0,"lm":9000000.0},"6":{"cd":"nok","st":3,"lowl":58.0,"lm":9000000.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0,"lm":3.0E8},"15":{"cd":"gel","st":1,"lowl":1.0,"lm":2600000.0},"31":{"cd":"try","st":1,"lowl":1.0,"lm":3100000.0},"30":{"cd":"ron","st":1,"lowl":1.0,"lm":5300000.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"41":{"cd":"bgn","st":1,"lowl":1.0,"lm":2000000.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"7":{"cd":"sek","rt":3,"lm":9000000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":129.0,"so":1},"1":{"cd":"eur","st":1,"lowl":129.0,"so":1},"3":{"cd":"usd","st":3,"lowl":129.0,"so":1},"4":{"cd":"pln","st":1,"lowl":129.0,"so":1},"8":{"cd":"dkk","st":3,"lowl":129.0,"so":1},"6":{"cd":"nok","st":3,"lowl":129.0,"so":1},"5":{"cd":"chf","st":6,"lowl":129.0,"lm":35000.0,"so":1},"10":{"cd":"cad","st":6,"lowl":129.0,"lm":70000.0,"so":1},"9":{"cd":"aud","st":6,"lowl":129.0,"lm":40000.0,"so":1},"14":{"cd":"huf","st":1,"lowl":129.0,"so":1},"15":{"cd":"gel","st":1,"lowl":129.0,"so":1},"31":{"cd":"try","st":1,"lowl":129.0,"so":1},"30":{"cd":"ron","st":1,"lowl":129.0,"so":1},"35":{"cd":"sgd","st":6,"lowl":129.0,"lm":40000.0,"so":1},"32":{"cd":"nzd","st":6,"lowl":129.0,"lm":40000.0,"so":1},"26":{"cd":"inr","st":1,"lowl":129.0,"so":1},"24":{"cd":"hkd","st":6,"lowl":129.0,"lm":240000.0,"so":1},"40":{"cd":"czk","st":1,"lowl":129.0,"lm":2.5E7,"so":1},"41":{"cd":"bgn","st":1,"lowl":129.0,"so":1},"28":{"cd":"myr","st":6,"lowl":129.0,"lm":200000.0,"so":1},"33":{"cd":"php","st":9,"lowl":129.0,"lm":480000.0,"so":1},"42":{"cd":"brl","st":10,"lowl":129.0,"lm":25000.0,"so":1},"54":{"cd":"ngn","st":11,"lowl":129.0,"lm":960000.0,"so":1},"55":{"cd":"pkr","st":12,"lowl":129.0,"lm":500000.0,"so":1},"65":{"cd":"mad","st":15,"lowl":129.0,"lm":260000.0,"so":1}}},"8":{"cd":"dkk","rt":3,"lm":9000000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":105.0,"so":1},"1":{"cd":"eur","st":1,"lowl":105.0,"lm":1200000.0,"so":1},"3":{"cd":"usd","st":3,"lowl":105.0,"so":1},"4":{"cd":"pln","st":1,"lowl":105.0,"so":1},"7":{"cd":"sek","st":3,"lowl":105.0,"lm":220000.0,"so":1},"6":{"cd":"nok","st":3,"lowl":105.0,"lm":9000000.0,"so":1},"5":{"cd":"chf","st":6,"lowl":105.0,"lm":35000.0,"so":1},"10":{"cd":"cad","st":6,"lowl":105.0,"lm":70000.0,"so":1},"9":{"cd":"aud","st":6,"lowl":105.0,"lm":40000.0,"so":1},"14":{"cd":"huf","st":1,"lowl":105.0,"lm":3.0E8,"so":1},"15":{"cd":"gel","st":1,"lowl":105.0,"lm":2600000.0,"so":1},"31":{"cd":"try","st":1,"lowl":105.0,"lm":3100000.0,"so":1},"30":{"cd":"ron","st":1,"lowl":105.0,"lm":5300000.0,"so":1},"35":{"cd":"sgd","st":6,"lowl":105.0,"lm":40000.0,"so":1},"32":{"cd":"nzd","st":6,"lowl":105.0,"lm":40000.0,"so":1},"26":{"cd":"inr","st":1,"lowl":105.0,"so":1},"24":{"cd":"hkd","st":6,"lowl":105.0,"lm":240000.0,"so":1},"40":{"cd":"czk","st":1,"lowl":105.0,"lm":2.5E7,"so":1},"41":{"cd":"bgn","st":1,"lowl":105.0,"lm":2000000.0,"so":1},"28":{"cd":"myr","st":6,"lowl":105.0,"lm":200000.0,"so":1},"33":{"cd":"php","st":9,"lowl":105.0,"lm":480000.0,"so":1},"42":{"cd":"brl","st":10,"lowl":105.0,"lm":25000.0,"so":1},"54":{"cd":"ngn","st":11,"lowl":105.0,"lm":960000.0,"so":1},"55":{"cd":"pkr","st":12,"lowl":105.0,"lm":500000.0,"so":1},"65":{"cd":"mad","st":15,"lowl":105.0,"lm":260000.0,"so":1}}},"5":{"cd":"chf","rt":6,"lm":60000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0,"so":1},"1":{"cd":"eur","st":1,"lowl":1.0,"so":1},"3":{"cd":"usd","st":3,"lowl":16.0,"so":1},"4":{"cd":"pln","st":1,"lowl":1.0,"so":1},"7":{"cd":"sek","st":3,"lowl":16.0,"lm":220000.0,"so":1},"8":{"cd":"dkk","st":3,"lowl":16.0,"so":1},"6":{"cd":"nok","st":3,"lowl":16.0,"so":1},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0,"so":1},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0,"so":1},"14":{"cd":"huf","st":1,"lowl":1.0,"so":1},"15":{"cd":"gel","st":1,"lowl":1.0,"so":1},"31":{"cd":"try","st":1,"lowl":1.0,"so":1},"30":{"cd":"ron","st":1,"lowl":1.0,"so":1},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0,"so":1},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0,"so":1},"26":{"cd":"inr","st":1,"lowl":1.0,"so":1},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0,"so":1},"40":{"cd":"czk","st":1,"lowl":1.0,"so":1},"41":{"cd":"bgn","st":1,"lowl":1.0,"so":1},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0,"so":1},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0,"so":1},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0,"so":1},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0,"so":1},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0,"so":1},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"6":{"cd":"nok","rt":3,"lm":9000000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":117.0,"so":1},"1":{"cd":"eur","st":1,"lowl":117.0,"so":1},"3":{"cd":"usd","st":3,"lowl":117.0,"so":1},"4":{"cd":"pln","st":1,"lowl":117.0,"so":1},"7":{"cd":"sek","st":3,"lowl":117.0,"lm":220000.0,"so":1},"8":{"cd":"dkk","st":3,"lowl":117.0,"so":1},"5":{"cd":"chf","st":6,"lowl":117.0,"lm":35000.0,"so":1},"10":{"cd":"cad","st":6,"lowl":117.0,"lm":70000.0,"so":1},"9":{"cd":"aud","st":6,"lowl":117.0,"lm":40000.0,"so":1},"14":{"cd":"huf","st":1,"lowl":117.0,"lm":3.0E8,"so":1},"15":{"cd":"gel","st":1,"lowl":117.0,"lm":2600000.0,"so":1},"31":{"cd":"try","st":1,"lowl":117.0,"lm":3100000.0,"so":1},"30":{"cd":"ron","st":1,"lowl":117.0,"so":1},"35":{"cd":"sgd","st":6,"lowl":117.0,"lm":40000.0,"so":1},"32":{"cd":"nzd","st":6,"lowl":117.0,"lm":40000.0,"so":1},"26":{"cd":"inr","st":1,"lowl":117.0,"so":1},"24":{"cd":"hkd","st":6,"lowl":117.0,"lm":240000.0,"so":1},"40":{"cd":"czk","st":1,"lowl":117.0,"lm":2.5E7,"so":1},"41":{"cd":"bgn","st":1,"lowl":117.0,"lm":2000000.0,"so":1},"28":{"cd":"myr","st":6,"lowl":117.0,"lm":200000.0,"so":1},"33":{"cd":"php","st":9,"lowl":117.0,"lm":480000.0,"so":1},"42":{"cd":"brl","st":10,"lowl":117.0,"lm":25000.0,"so":1},"54":{"cd":"ngn","st":11,"lowl":117.0,"lm":960000.0,"so":1},"55":{"cd":"pkr","st":12,"lowl":117.0,"lm":500000.0,"so":1},"65":{"cd":"mad","st":15,"lowl":117.0,"lm":260000.0,"so":1}}},"14":{"cd":"huf","rt":1,"lm":3.0E8,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"1":{"cd":"eur","st":1,"lowl":1.0},"3":{"cd":"usd","st":3,"lowl":4182.0},"4":{"cd":"pln","st":1,"lowl":1.0},"7":{"cd":"sek","st":3,"lowl":4182.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":4182.0},"6":{"cd":"nok","st":3,"lowl":4182.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"15":{"cd":"gel","st":1,"lowl":1.0},"31":{"cd":"try","st":1,"lowl":1.0},"30":{"cd":"ron","st":1,"lowl":1.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"41":{"cd":"bgn","st":1,"lowl":1.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"15":{"cd":"gel","rt":1,"lm":2600000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"1":{"cd":"eur","st":1,"lowl":1.0},"3":{"cd":"usd","st":3,"lowl":37.0},"4":{"cd":"pln","st":1,"lowl":1.0},"7":{"cd":"sek","st":3,"lowl":37.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":37.0},"6":{"cd":"nok","st":3,"lowl":37.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0,"lm":3.0E8},"31":{"cd":"try","st":1,"lowl":1.0},"30":{"cd":"ron","st":1,"lowl":1.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"41":{"cd":"bgn","st":1,"lowl":1.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"31":{"cd":"try","rt":1,"lm":3100000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"1":{"cd":"eur","st":1,"lowl":1.0},"3":{"cd":"usd","st":3,"lowl":43.0},"4":{"cd":"pln","st":1,"lowl":1.0},"7":{"cd":"sek","st":3,"lowl":43.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":43.0},"6":{"cd":"nok","st":3,"lowl":43.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0,"lm":3.0E8},"15":{"cd":"gel","st":1,"lowl":1.0,"lm":2600000.0},"30":{"cd":"ron","st":1,"lowl":1.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"41":{"cd":"bgn","st":1,"lowl":1.0,"lm":2000000.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"30":{"cd":"ron","rt":1,"lm":5300000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"1":{"cd":"eur","st":1,"lowl":1.0},"3":{"cd":"usd","st":3,"lowl":63.0},"4":{"cd":"pln","st":1,"lowl":1.0},"7":{"cd":"sek","st":3,"lowl":63.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":63.0},"6":{"cd":"nok","st":3,"lowl":63.0,"lm":9000000.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0,"lm":3.0E8},"15":{"cd":"gel","st":1,"lowl":1.0,"lm":2600000.0},"31":{"cd":"try","st":1,"lowl":1.0,"lm":3100000.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"41":{"cd":"bgn","st":1,"lowl":1.0,"lm":2000000.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"40":{"cd":"czk","rt":1,"lm":2.5E7,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"1":{"cd":"eur","st":1,"lowl":1.0},"3":{"cd":"usd","st":3,"lowl":380.0},"4":{"cd":"pln","st":1,"lowl":1.0},"7":{"cd":"sek","st":3,"lowl":380.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":380.0},"6":{"cd":"nok","st":3,"lowl":380.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0},"15":{"cd":"gel","st":1,"lowl":1.0},"31":{"cd":"try","st":1,"lowl":1.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"30":{"cd":"ron","st":1,"lowl":1.0},"41":{"cd":"bgn","st":1,"lowl":1.0},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}},"41":{"cd":"bgn","rt":1,"lm":2000000.0,"tgt":{"2":{"cd":"gbp","st":1,"lowl":1.0},"1":{"cd":"eur","st":1,"lowl":1.0},"3":{"cd":"usd","st":3,"lowl":29.0},"4":{"cd":"pln","st":1,"lowl":1.0},"7":{"cd":"sek","st":3,"lowl":29.0,"lm":220000.0},"8":{"cd":"dkk","st":3,"lowl":29.0},"6":{"cd":"nok","st":3,"lowl":29.0},"5":{"cd":"chf","st":6,"lowl":1.0,"lm":35000.0},"10":{"cd":"cad","st":6,"lowl":1.0,"lm":70000.0},"9":{"cd":"aud","st":6,"lowl":1.0,"lm":40000.0},"14":{"cd":"huf","st":1,"lowl":1.0,"lm":3.0E8},"15":{"cd":"gel","st":1,"lowl":1.0,"lm":2600000.0},"31":{"cd":"try","st":1,"lowl":1.0},"35":{"cd":"sgd","st":6,"lowl":1.0,"lm":40000.0},"32":{"cd":"nzd","st":6,"lowl":1.0,"lm":40000.0},"26":{"cd":"inr","st":1,"lowl":1.0},"24":{"cd":"hkd","st":6,"lowl":1.0,"lm":240000.0},"30":{"cd":"ron","st":1,"lowl":1.0},"40":{"cd":"czk","st":1,"lowl":1.0,"lm":2.5E7},"28":{"cd":"myr","st":6,"lowl":1.0,"lm":200000.0},"33":{"cd":"php","st":9,"lowl":1.0,"lm":480000.0},"42":{"cd":"brl","st":10,"lowl":1.0,"lm":25000.0},"54":{"cd":"ngn","st":11,"lowl":1.0,"lm":960000.0},"55":{"cd":"pkr","st":12,"lowl":1.0,"lm":500000.0},"65":{"cd":"mad","st":15,"lowl":1.0,"lm":260000.0,"so":1}}}}},
+			targetUnderLimitMessage: 'Receive value should be more than 0 !',
+			notNumberMessage: 'Transaction value should be a number!',
+			isAdmin: 0,
+			externalSubmitButton: jQuery('.submitCalculatorForm'),
+			compareLinks:  {
+				'default': '/s/gbp2eur',
+				'PLN': '/transfer-money-to-poland'
+			},
+			showOtherOptionInCurSelectors: (!calcWidget && DeviceUtils.isDesktop),
+			otherOptionCopy: 'Other',
+			widget: calcWidget,
+			locationUrl: "",
+			calculatorLocation: 'click_calculator'
+		});
+
+		if (calcWidget) {
+			jQuery('.b-calculator__details-toggle').remove();
+		}
+		jQuery('.event_calc_make_a_transfer').click(function() {
+			dataLayer = dataLayer || [];
+			dataLayer.push({'event': 'calculator-get-started-click'});
+		});
+
+	var AuthenticateModal = function (dialogBlock) {
+		this.block = dialogBlock;
+		this.closeIcon = this.block.find('#close-capture-email');
+		this.fireModalLink = this.block.find('a#fire-emailCapture');
+		this.calcSubmitButton = jQuery('#submitPaymentForm, .event_calc_make_a_transfer');
+		this.calculatorForm = jQuery('#calculateForm');
+		this.sourceAmountInput = this.calculatorForm.find("input[name=sourceValue]");
+		this.targetAmountInput = this.calculatorForm.find("input[name=targetValue]");
+		this.sourceCurrencySelect = this.calculatorForm.find("select[name=sourceCurrencyId]");
+		this.targetCurrencySelect = this.calculatorForm.find("select[name=targetCurrencyId]");
+		this.fixTypeInput = this.calculatorForm.find("input[name=fixType]");
+		this.calculatorData = {};
+		this.landingPageCTAs = jQuery('.js-header__send-money');
+		this.headerRegister = jQuery('.js-header-register');
+		this.headerLogin = jQuery('.js-header-login');
+
+		this.UsdPopUpSorceThreshold = 1500;
+		this.USDCurrencyId = "3";
+
+		this.init()
+	};
+
+	AuthenticateModal.prototype = {
+
+		init: function () {
+			this.listenToCalculator();
+			this.listenToCTAs();
+			this.listenToHeaderMenuLinks();
+			this.fireModalLink.fancybox({
+				'showCloseButton': true,
+				'hideOnOverlayClick': false,
+				'overlayOpacity': 0.5,
+				'scrolling': 'visible',
+				tpl: {
+					closeBtn: '<a title="Close" class="b-modal__fancybox-close" href="javascript:;"></a>'
+				},
+				afterClose: function () {
+					$("#authenticateModal").load("/authenticationModal/alreadyAMember");
+				},
+				padding: 0,
+				onStart: function () {
+					$("#fancybox-outer, #fancybox-bg-n, #fancybox-bg-ne, #fancybox-bg-e, #fancybox-bg-se," +
+							"#fancybox-bg-s, #fancybox-bg-sw, #fancybox-bg-w, #fancybox-bg-nw").css("background", "none");
+				}
+			});
+		},
+
+		populateFormData: function () {
+			var self = this;
+			//Get calculator data
+			self.block.find("input[name=sourceValue]").val(self.sourceAmountInput.val());
+			self.block.find("input[name=targetValue]").val(self.targetAmountInput.val());
+			self.block.find("input[name=sourceCurrencyId]").val(self.sourceCurrencySelect.val());
+			self.block.find("input[name=targetCurrencyId]").val(self.targetCurrencySelect.val());
+			self.block.find("input[name=fixType]").val(self.fixTypeInput.val());
+		},
+
+		listenToCalculator: function () {
+			var self = this;
+
+			this.calculatorForm.submit(function (e) {
+				if (typeof exchangeCalculator != "undefined" && exchangeCalculator.options.invalidInput) {
+					return false
+				}
+				e.preventDefault();
+				LogUtils.handleTransferInitiation('.event_calc_make_a_transfer', 'click_calculator');
+
+				self.populateFormData();
+				self.fireModalLink.click();
+			});
+		},
+
+		listenToCTAs: function () {
+			var self = this;
+
+			this.landingPageCTAs.click(function (e) {
+				e.preventDefault();
+				self.populateFormData();
+				self.fireModalLink.click();
+				try{
+					LogUtils.trackMixpanelEvent('click header send money cta', {'pageName': 'home page'});
+				} catch(er){ console.error('Error sending analytics: ' + er)}
+			})
+		},
+
+		listenToHeaderMenuLinks: function () {
+			var self = this;
+
+			this.headerRegister.click(function (e) {
+				e.preventDefault();
+				$("#authenticateModal").load("/authenticationModal/registerFormModal", function(){
+					self.fireModalLink.click();
+				});
+				try{
+					LogUtils.trackMixpanelEvent('click_header_register', {'pageName': 'home page'});
+				} catch(er){ console.error('Error sending analytics: ' + er)}
+			});
+
+			this.headerLogin.click(function (e) {
+				e.preventDefault();
+				$("#authenticateModal").load("/authenticationModal/loginFormModal", function(){
+					self.fireModalLink.click();
+				});
+				try{
+					LogUtils.trackMixpanelEvent('click_header_login', {'pageName': 'home page'});
+				} catch(er){ console.error('Error sending analytics: ' + er)}
+			});
+		}
+
+	};
+
+	jQuery(function () {
+		new AuthenticateModal(jQuery('.js-authenticate-modal'));
+	});
+
+
+	$(function() {
+		var CurrencyWishesHandler = function(block, openCWOnStart) {
+			this.block = block;
+			this.openCWOnStart = openCWOnStart;
+			this.curFromSelect = this.block.find('select[name="currencyFrom"]');
+			this.curToSelect = this.block.find('select[name="currencyTo"]');
+			this.closePopUpLink = this.block.find('a#close-cur-wish-pop');
+			this.firePopUpLink = this.block.find('a#fire-cur-wish-pop');
+			this.curWishListForm = this.block.find('#curWishListForm');
+			this.addFriendsForm = this.block.find('#addFriendsForm');
+			this.submitStep1 = this.block.find('input.submit-curr-wish');
+			this.submitStep2 = this.block.find('input.submit-add-friends');
+			this.init();
+		};
+
+		CurrencyWishesHandler.prototype = {
+			init: function() {
+				var self = this;
+				this.activeForm = "initial";
+
+				this.closePopUpLink.click(function() {
+					$.fancybox.close();
+					LogUtils.sendGoogleAnalyticsEvent('CurrencyWishesPopUp', self.activeForm + '-screen-click-close');
+
+					self.resetDialog();
+				});
+
+				this.firePopUpLink.fancybox({
+					'showCloseButton': false,
+					'hideOnOverlayClick' : false,
+					'overlayOpacity': 0.5,
+					padding: 0,
+					onStart: function(){
+						$("#fancybox-outer, #fancybox-bg-n, #fancybox-bg-ne, #fancybox-bg-e, #fancybox-bg-se," +
+								"#fancybox-bg-s, #fancybox-bg-sw, #fancybox-bg-w, #fancybox-bg-nw").css("background","none");
+					}
+				});
+
+				this.submitStep1.click(function(e) {
+					e.preventDefault();
+
+					var subheadText = self.addFriendsForm.find('.add-friends-subhead').html();
+
+					var currencyFrom = self.curFromSelect.val();
+					var currencyTo = self.curToSelect.val();
+					var errors = self.curWishListForm.find('.errors');
+
+					$.ajax({
+						type: "POST",
+						url: "/currencyWishes/captureCurrencyWish",
+						dataType: "json",
+						data: self.curWishListForm.serialize(),
+						success: function (result) {
+							errors.hide();
+
+							if (result.redirectToPaymentFlow) {
+								window.location.href = result.redirectToPaymentFlow;
+							}
+
+							if (result.success) {
+								self.addFriendsForm.find('.add-friends-subhead').html(Mustache.render(subheadText, {currencyFrom: currencyFrom, currencyTo: currencyTo}));
+
+								self.curWishListForm.hide();
+								self.addFriendsForm.show();
+								self.activeForm = "final"
+							} else {
+								if (result.errors) {
+									errors.html(self.parseErrorList(result.errors));
+									errors.show();
+								}
+							}
+						}
+					});
+
+					LogUtils.sendGoogleAnalyticsEvent('CurrencyWishesPopUp', 'initial-screen-all-done-click');
+					return false;
+				});
+
+				this.submitStep2.click(function(e) {
+					e.preventDefault();
+
+					var currencyFrom = self.curFromSelect.val();
+					var currencyTo = self.curToSelect.val();
+					var emailsInput = self.addFriendsForm.find('#emailsInput');
+					var message = self.addFriendsForm.find('.message');
+					var errors = self.addFriendsForm.find('.errors');
+
+					$.ajax({
+						type: "POST",
+						url: "/currencyWishes/addFriends",
+						dataType: "json",
+						data: self.addFriendsForm.serialize() + "&currencyFrom=" + currencyFrom + "&currencyTo=" + currencyTo,
+						success: function (result) {
+							message.hide();
+							errors.hide();
+							emailsInput.val('');
+
+							if (result.success && result.message) {
+								message.show();
+								message.text(result.message);
+							}
+
+							if (result.errors) {
+								errors.html(self.parseErrorList(result.errors));
+								errors.show();
+							}
+						}
+					});
+
+					LogUtils.sendGoogleAnalyticsEvent('CurrencyWishesPopUp', 'final-screen-add-friends-to-the-list-click');
+					return false;
+				});
+
+				this.openCWOnStartIfRequired();
+			},
+
+			resetDialog: function() {
+				this.curWishListForm[0].reset();
+				this.activeForm = "initial";
+				this.addFriendsForm.hide();
+				this.curWishListForm.show();
+			},
+
+			parseErrorList: function(errors) {
+				var result = '';
+				$.each(errors, function (index, value) {
+					result += value + "</br>";
+				});
+
+				return result;
+			},
+
+			openCWOnStartIfRequired: function() {
+				var self = this;
+
+				if (self.openCWOnStart) {
+					self.firePopUpLink.click();
+				}
+			}
+
+		};
+		new CurrencyWishesHandler(jQuery('#cur-wish-dialog'), false);
+	});
+
+		jQuery(window).load(function(){
+
+			//FLOODLIGHT - ESSENCE
+			var axelE = Math.random() + "";
+			var aE = axelE * 10000000000000;
+
+			jQuery("<iframe>").attr({"src": "https://4510619.fls.doubleclick.net/activityi;src=4510619;type=Homep0;cat=TWHom0;ord=" + aE + "?", "height": 1, "width": 1, "frameborder": "0", "style": "display:none"}).appendTo("body");
+		});
+	
+		jQuery('.js-drawer-button').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('home_page', 'click_how_it_works');
+			LogUtils.trackMixpanelEvent('click_how_it_works', {'pageName': 'home_page'});
+		});
+
+		jQuery('.js-drawer-open-video').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('home_page', 'click_watch_video_drawer');
+		});
+
+		jQuery('.event_calc_make_a_transfer').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('home_page', 'calculator_click_get_started');
+		});
+
+		jQuery('.js-testimonials-play').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('home_page', 'watch_testimonials_video');
+		});
+
+		jQuery('.event-header-send-money').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('home_page', '.click-header-send-money');
+		});
+
+		jQuery('.event-click-trustpilot-link').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('home_page', 'click-trustpilot-link');
+		});
+		jQuery('.event-bottom-get-started').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('make_transfer', 'click-bottom-get-started');
+		});
+		jQuery('.event-find-out-more-bottom-support').click(function() {
+			LogUtils.sendGoogleAnalyticsEvent('make_transfer', 'click-find-out-more-bottom-support');
+		});
+
+		LogUtils.trackPageView("front page", {landing: 'main'});
+		var payments = '/request/paymentsJson';
+	
+	var _paq = _paq || [];
+	(function () {
+		var u = (("https:" == document.location.protocol) ? "https://collector-207.tvsquared.com/piwik/" : "http://collector-207.tvsquared.com/piwik/");
+		_paq.push(['setSiteId', "207-1"]);
+		_paq.push(['setTrackerUrl', u + 'piwik.php']);
+		_paq.push(['trackPageView']);
+		var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0]; g.type = 'text/javascript'; g.defer = true; g.async = true; g.src = u + 'piwik.js';
+		s.parentNode.insertBefore(g, s);
+	})();
+
+(function(){
+	window._fbds = window._fbds || {};
+	_fbds.pixelId = 490451301059511;
+	var fbds = document.createElement('script');
+	fbds.async = true;
+	fbds.src = '//connect.facebook.net/en_US/fbds.js';
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(fbds, s);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(["track", "PixelInitialized", {}]);
+
+	if (jQuery && jQuery.validator) {
+		jQuery.extend(jQuery.validator.messages, {
+			required: 'We need this information.',
+			remote: 'Please fix this field.',
+			email: 'Please enter a valid email address.',
+			url: 'Please enter a valid URL.',
+			date: 'Please enter a valid date.',
+			dateISO: 'Please enter a valid date (ISO).',
+			number: 'Please enter a valid number.',
+			digits: 'Please enter only digits.',
+			creditcard: 'Please enter a valid credit card number.',
+			equalTo: 'Please enter the same value again.',
+			accept: 'Please enter a value with a valid extension.',
+			maxlength: jQuery.validator.format('Please enter no more than {0} characters.'),
+			minlength: jQuery.validator.format('Please enter at least {0} characters.'),
+			rangelength: jQuery.validator.format('Please enter a value between {0} and {1} characters long.'),
+			range: jQuery.validator.format('Please enter a value between {0} and {1}.'),
+			max: jQuery.validator.format('Please enter a value less than or equal to {0}.'),
+			min: jQuery.validator.format('Please enter a value greater than or equal to {0}.')
+		});
+	}
+</script>
+
+<script type="text/javascript">
+	
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+	$(function () {
+		setMixPanelCookies();
+	});
+	function setMixPanelCookies() {
+		if (!mixpanel.get_distinct_id) {
+			setTimeout(setMixPanelCookies, 50);
+			return;
+		}
+
+		var analytics = {
+			userId: mixpanel.get_distinct_id(),
+			isRegistered: mixpanel.get_property('isRegistered')
+		};
+
+		
+		window.dataLayer.push({mixpanelId: mixpanel.get_distinct_id()});
+		
+
+		jQuery.cookie('analytics', JSON.stringify(analytics), { path: '/'});
+
+		
+			var sourceChannel = 'direct';
+			var capturedSourceChannel = '';
+			var captureUrl = '/captureUserData/captureVisit';
+			if (sourceChannel != capturedSourceChannel && !analytics.isRegistered) {
+				$.post(captureUrl);
+			}
+		
+	}
+</script>
+<link rel="stylesheet" type="text/css" href="/static/css/tooltip/4.1921_tooltipStyles.css">
+<script type="text/javascript" src="/static/plugins/tooltip-0.7/js/tooltip/4.1921_tooltip-min.js"></script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"8443989","applicationTime":357,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"c89bf10fb7","transactionName":"YAMAZxBQVkZVVk0NXllJJUEDWFRGd1pXEENYCg5WEB5UVFpRUApWGA8MWhZYWUFR","agent":"js-agent.newrelic.com\/nr-632.min.js","errorBeacon":"bam.nr-data.net"}</script>
+
+
+<script src="//browser-update.org/update.js"></script><div id="SnapABug_Button" class="SnapABug_Button"><img id="SnapABug_bImg" style="position: relative; bottom: -4px; " src="https://www.snapengage.com/statusImage?w=2284c885-c54d-47fb-8b5c-3f879a9ba526&amp;rand=764134f4&amp;on=https%3A%2F%2Fcommondatastorage.googleapis.com%2Fcode.snapengage.com%2Fbtn%2Flivechat_bottom_en.png&amp;off=https%3A%2F%2Fcommondatastorage.googleapis.com%2Fcode.snapengage.com%2Fbtn%2Fs.gif" alt="Help" border="0" onmouseover="SnapABug.buttonOver();" onmouseout="SnapABug.buttonOut();"></div><div id="SnapABug_W" style="position: fixed; display: none; top: 0%; left: 0px; width: 100%; height: 100%; z-index: 2147483644; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-collapse: collapse; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; list-style-type: none; list-style-position: initial; list-style-image: initial; text-align: left; font-size: 100%; font-weight: normal; outline-style: none; outline-width: initial; outline-color: initial; background-image: url(https://storage.googleapis.com/code.snapengage.com/wbg/blank.gif); background-repeat: repeat repeat; "><div id="SnapABug_O" style="position:absolute;width:100%;height:100%;top:0px;left:0px;text-align:left;z-index:auto;-moz-opacity:0.5;opacity:.50;filter:alpha(opacity=50);background-color:white;"></div></div><div id="SnapABug_WP" style="position: fixed; display: none; z-index: 2147483645; overflow-x: hidden; overflow-y: hidden; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-collapse: collapse; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; border-top-style: none; border-right-style: none; border-bottom-style: none; border-left-style: none; border-width: initial; border-color: initial; list-style-type: none; list-style-position: initial; list-style-image: initial; outline-style: none; outline-width: initial; outline-color: initial; "><div id="SnapABug_P" style="position:absolute;left:0px;top:0px;margin:0;padding:0;border:none;text-align:left;z-index:1;overflow:hidden;background-color:transparent;"></div><div id="SnapABug_IP" style="position:absolute;left:0px;top:0px;z-index:0;"></div><div id="SnapABug_DB" style="position:absolute;left:0px;top:0px;margin:0;border:0;padding:0;z-index:1;cursor:move;background-image:url('https://storage.googleapis.com/code.snapengage.com/wbg/blank.gif');background-repeat:repeat;"></div></div><div id="SnapABug_Applet" style="position: fixed; display: none; top: 0%; left: 0px; width: 100%; height: 2px; text-align: left; z-index: 2147483646; "></div>
+<script type="text/javascript" id="">twttr.conversion.trackPid("l50zq");</script>
+<noscript>
+&lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l50zq&amp;amp;p_id=Twitter"&gt;
+&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l50zq&amp;amp;p_id=Twitter"&gt;</noscript>
+<script type="text/javascript" id="">twttr.conversion.trackPid("l59rt");</script>
+<noscript>
+&lt;img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l59rt&amp;amp;p_id=Twitter"&gt;
+&lt;img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l59rt&amp;amp;p_id=Twitter"&gt;</noscript><script src="https://js-agent.newrelic.com/nr-632.min.js"></script><iframe src="https://4506822.fls.doubleclick.net/activityi;src=4506822;type=RET4S0;cat=TRANS0;ord=2119647895451.635?" height="1" width="1" frameborder="0" style="display:none"></iframe><img style="display:none" src="//api.nanigans.com/event.php?app_id=66869&amp;type=visit&amp;name=landing"><iframe src="https://4510619.fls.doubleclick.net/activityi;src=4510619;type=Homep0;cat=TWHom0;ord=2645650794729.5903?" height="1" width="1" frameborder="0" style="display:none"></iframe></body></html>

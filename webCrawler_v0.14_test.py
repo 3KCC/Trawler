@@ -331,8 +331,8 @@ def generateID(day, urlCode, FCY, LCY):
 #								buyCCY_endPattern, selCCY_pattern, bid_endPattern, offer_endPattern, date_endPattern, unit_endPattern,
 #					order]
 def getDetails(name):
-	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
-	#db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
+	#db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
+	db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
 	cursor = db.cursor()
 	# Prepare SQL query to INSERT a record into the database.
 	sql = "SELECT * FROM url \
@@ -375,8 +375,8 @@ def getCode(country):
 	return checkCode(code)
 
 def checkCode(s):
-	#db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
-	db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
+	db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
+	#db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 	cursor = db.cursor()
 
 	if len(s) == 3:
@@ -478,7 +478,6 @@ def insert(urlCode_url, patterns):
 
 	#listOfUrls = ['https://azimo.com/en/send-money-to-abkhazia.html','https://azimo.com/en/send-money-to-thailand.html','https://azimo.com/en/send-money-to-uzbekistan.html']
 	#listOfUrls = ['https://azimo.com/en/send-money-to-abkhazia.html','https://azimo.com/en/send-money-to-armenia.html']
-	#listOfUrls = ['https://azimo.com/en/send-money-to-the-philippines.html']
 	for link in listOfUrls:
 		#exception crawl
 		if link in exception:
@@ -566,8 +565,9 @@ def insert(urlCode_url, patterns):
 								if idx not in removeList:
 									removeList.append(idx)
 
-						for e in removeList:
-							dynamicData_modified[0].pop(e)
+						#need to delete them in reverse order so that you don't throw off the subsequent indexes
+						for e in sorted(removeList, reverse=True):
+							del dynamicData_modified[0][e]
 
 
 						#all ccypair in this page has been crawled by previous pages - Azimo
@@ -578,7 +578,7 @@ def insert(urlCode_url, patterns):
 			pt_index = 0
 			for pD in postData:
 				webpage, ccyPairs = crawlWeb(link, method, pD, dynamicData_modified, patterns[pt_index], endPattern)
-				#print webpage
+
 				if isinstance(webpage, basestring):
 					dt = parseText(webpage, patterns[pt_index], order, endPattern, False)
 
@@ -606,10 +606,9 @@ def insert(urlCode_url, patterns):
 		#end for loop for listOfUrls
 		#print data
 		#data: compressed all data
-		#vals: clean data
-
+		#vals: clean data	
 		vals = []
-		#print data
+
 		for e in data:
 			#[buyCCY, sellCCY, bid, offer, date, unit]
 			full_date = e[date_pos].strip()
@@ -739,8 +738,8 @@ def insert(urlCode_url, patterns):
 		else:
 			nameOfTb = urlCode + 'rates'
 		
-		#db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
-		db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
+		db = MySQLdb.connect("localhost","root","ezfx0109","testdb")
+		#db = MySQLdb.connect("localhost","root","ezfx0109","crawlerdb")
 		cursor = db.cursor()
 		#Prepare SQL query to INSERT a record into the database.
 		if not inverse:
